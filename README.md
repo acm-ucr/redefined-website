@@ -1,4 +1,6 @@
-# ACM UCR Website Template
+# redefineD Website
+
+redefineD is dedicated to educating students about street medicine and the needs of underserved communities. By working closely with their parent organization, they provide members not only with knowledge but also with hands-on fieldwork opportunities. Through service, learning, and real-world experience, they aim to help marginalized populations redefine their lives while inspiring students to grow in purpose and create a lasting impact.
 
 ![Next.js](https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/typescript-%23407ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
