@@ -1,1 +1,20 @@
+@import url("https://fonts.googleapis.com/css?family=Chivo");
+@import url("https://fonts.googleapis.com/css?family=Zilla Slab");
+@import url("https://fonts.googleapis.com/css?family=Alfa Slab One");
+@import url("https://fonts.googleapis.com/css?family=Albert Sans");
 @import "tailwindcss";
+
+@theme {
+  --color-redefined-cream: #fff7df;
+  --color-redefined-olive: #5d5947;
+  --color-redefined-rust: #9e4325;
+  --color-redefined-silver: #d9d9d9;
+  --color-redefined-taupe: #c0baa7;
+  --color-redefined-sage: #a39e8a;
+  --color-redefined-olive-50: color-mix(in srgb, #5d5947 50%, transparent);
+
+  --font-redefined-chivo: "Chivo", serif;
+  --font-redefined-zilla: "Zilla Slab", serif;
+  --font-redefined-alfa: "Alfa Slab One", serif;
+  --font-redefined-albert: "Albert Sans", serif;
+}
