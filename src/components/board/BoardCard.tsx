@@ -36,3 +36,5 @@ const BoardCard = () => {
     </div>
   );
 };
+
+export default BoardCard;
