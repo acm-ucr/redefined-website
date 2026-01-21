@@ -8,7 +8,7 @@ interface BoardCardProps {
   email: string;
 }
 
-const BoardCard = ({imagePath, name, role, major, email}: BoardCardProps) => {
+const BoardCard = ({ imagePath, name, role, major, email }: BoardCardProps) => {
   return (
     <div className="flex min-h-screen items-center justify-center p-4">
       <div className="relative h-135 w-96">
@@ -35,9 +35,7 @@ const BoardCard = ({imagePath, name, role, major, email}: BoardCardProps) => {
             <div className="mt-2 space-y-1 text-lg font-black text-gray-600">
               <p>{major}</p>
             </div>
-            <p className="mt-2 font-semibold text-black italic">
-              {email}
-            </p>
+            <p className="mt-2 font-semibold text-black italic">{email}</p>
           </div>
         </div>
       </div>
