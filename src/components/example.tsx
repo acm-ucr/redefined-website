@@ -15,7 +15,6 @@ const Example = (props: { text1: string; text2: string; text3: string }) => {
       <div className="bg-redefined-olive w-1/2 p-5 text-center text-2xl text-white">
         {props.text3}
       </div>
-      {/* Hint: Add another box/div here similarly to line 4 */}
     </div>
   );
 };
