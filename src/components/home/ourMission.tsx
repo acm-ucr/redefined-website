@@ -1,5 +1,5 @@
 import Image from "next/image";
-import heartLogo from "@/public/redefineD_heart.webp"
+import heartLogo from "@/public/redefineD_heart.webp";
 
 interface MissionComponentProps {
   children: string;
@@ -12,10 +12,7 @@ const OurMissionComponent = ({ children }: MissionComponentProps) => {
         OUR MISSION
       </div>
       <div className="bg-redefined-cream flex w-[74%] items-start gap-2 rounded-[50px] py-5 pr-13 pl-10 drop-shadow-[-20px_20px_0px_#5d5947]">
-        <Image
-          alt="Picture of heart"
-          src={heartLogo}
-        ></Image>
+        <Image alt="Picture of heart" src={heartLogo}></Image>
         <div className="font-redefined-albert text-center align-middle text-2xl leading-[34px]">
           {children}
         </div>
