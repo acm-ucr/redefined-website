@@ -7,9 +7,9 @@ import Image from "next/image";
 const Footer = () => {
   return (
     <div className="bg-redefined-olive flex w-full py-4">
-      <div className="flex w-full items-center justify-between px-4">
+      <div className="flex w-full items-center justify-between px-12">
         <Image src={Logo} alt="redefineD Logo" className="w-48" />
-        <div aria-label="Footer links" className="flex gap-2">
+        <div aria-label="Footer links" className="flex gap-4">
           {footerLinks.map((link) => {
             const Icon = link.icon;
             return (
