@@ -1,3 +1,5 @@
+import Footer from "@/components/footer";
+
 import "./globals.css";
 import {
   Chivo,
@@ -48,6 +50,7 @@ export default function RootLayout({ children }: LayoutProps) {
         className={`${chivo.variable} ${albert.variable} ${zilla.variable} ${alfa.variable}`}
       >
         <ReactQueryClientProvider>{children}</ReactQueryClientProvider>
+        <Footer />
       </body>
     </html>
   );
