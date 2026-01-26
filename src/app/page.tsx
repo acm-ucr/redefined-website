@@ -1,61 +1,11 @@
-import BoardCard from "@/components/board/BoardCard";
+import Example from "@/components/example";
 
-const boardMembers = [
-  {
-    name: "Noah Wong",
-    role: "President",
-    major: "3rd Year - Biology",
-    email: "nwong086@ucr.edu",
-    imagePath: "/board/noahWong.webp",
-  },
-  {
-    name: "Koni Moss",
-    role: "Vice President",
-    major: "3rd Year - Environmental Science",
-    email: "kmoss006@ucr.edu",
-    imagePath: "/board/koniMoss.webp",
-  },
-  {
-    name: "Charlize Munar",
-    role: "Treasurer",
-    major: "3rd Year - Biology",
-    email: "cmuna002@ucr.edu",
-    imagePath: "/board/charlizeMunar.webp",
-  },
-  {
-    name: "Alyssa Ngo",
-    role: "Secretary",
-    major: "3rd Year - Biology",
-    email: "ango094@ucr.edu",
-    imagePath: "/board/alyssaNgo.webp",
-  },
-  {
-    name: "James Daluraya",
-    role: "Director of Outreach",
-    major: "3rd Year - Biology",
-    email: "rdalu003@ucr.edu",
-    imagePath: "/board/jamesDaluraya.webp",
-  },
-];
-
-export default function BoardEntry() {
+const Home = () => {
   return (
-    <div className="bg-redefined-olive-50 min-h-screen px-4 py-10">
-      <p className="font-redefined-zilla upper-case mb-12 text-center text-6xl font-extrabold text-amber-900 italic">
-        Meet The Board
-      </p>
-      <div className="mx-auto flex max-w-6xl flex-wrap justify-center gap-x-2 gap-y-10 px-4">
-        {boardMembers.map((member) => (
-          <BoardCard
-            key={member.email}
-            imagePath={member.imagePath}
-            name={member.name}
-            role={member.role}
-            major={member.major}
-            email={member.email}
-          />
-        ))}
-      </div>
+    <div className="flex h-screen w-screen items-center justify-center">
+      <Example text1="Adjust" text2="these" text3="Props" />
     </div>
   );
-}
+};
+
+export default Home;
