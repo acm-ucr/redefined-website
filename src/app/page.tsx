@@ -40,11 +40,11 @@ const boardMembers = [
 
 export default function BoardEntry() {
   return (
-    <div className="min-h-screen bg-redefined-olive-50 px-4 py-10">
-      <p className="mb-12 text-center text-6xl font-redefined-zilla font-extrabold upper-case italic text-amber-900">
+    <div className="bg-redefined-olive-50 min-h-screen px-4 py-10">
+      <p className="font-redefined-zilla upper-case mb-12 text-center text-6xl font-extrabold text-amber-900 italic">
         Meet The Board
       </p>
-      <div className="flex flex-wrap justify-center gap-x-2 gap-y-10 max-w-6xl mx-auto px-4">
+      <div className="mx-auto flex max-w-6xl flex-wrap justify-center gap-x-2 gap-y-10 px-4">
         {boardMembers.map((member) => (
           <BoardCard
             key={member.email}
