@@ -1,5 +1,7 @@
+import BoardEntry from "@/components/board/boardEntry";
+
 const BoardPage = () => {
-  return <div>Board</div>;
+  return <BoardEntry />;
 };
 
 export default BoardPage;
