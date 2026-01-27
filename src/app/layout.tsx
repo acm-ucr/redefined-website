@@ -1,3 +1,5 @@
+import Footer from "@/components/footer";
+
 import "./globals.css";
 import NavBar from "@/components/navBar";
 import {
@@ -50,6 +52,7 @@ export default function RootLayout({ children }: LayoutProps) {
       >
         <NavBar />
         <ReactQueryClientProvider>{children}</ReactQueryClientProvider>
+        <Footer />
       </body>
     </html>
   );
