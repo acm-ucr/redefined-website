@@ -9,8 +9,7 @@ const NavBar = () => {
   const pathname = usePathname();
 
   return (
-    <div className="bg-redefined-olive flex items-center justify-between px-8 py-4">
-      {/* Logo */}
+    <div className="bg-redefined-olive flex items-center justify-between px-8 py-5">
       <Link
         href="/home"
         className="flex h-10 w-50 items-center transition-transform duration-150 ease-out hover:scale-105"
@@ -18,7 +17,6 @@ const NavBar = () => {
         <Image src={Logo} alt="Logo" />
       </Link>
 
-      {/* Navigation Links */}
       <div className="flex gap-10">
         {navigationItems.map((item) => {
           const isActive = pathname === item.link;
