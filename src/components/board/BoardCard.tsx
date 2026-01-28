@@ -10,8 +10,8 @@ interface BoardCardProps {
 
 const BoardCard = ({ imagePath, name, role, major, email }: BoardCardProps) => {
   return (
-    <div className="flex min-h-screen flex-shrink-0 items-center justify-center p-4">
-      <div className="relative h-135 w-96">
+    <div className="flex flex-shrink-0 p-4">
+      <div className="relative h-135 w-80">
         <div className="absolute inset-0 translate-x-4 translate-y-4 items-center rounded-3xl bg-amber-800"></div>
 
         <div className="relative flex h-full flex-col items-center rounded-3xl bg-amber-50">
