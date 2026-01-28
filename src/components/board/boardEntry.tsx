@@ -7,7 +7,7 @@ const BoardEntry = () => {
       <p className="font-redefined-zilla mb-12 text-center text-6xl font-extrabold text-amber-900 uppercase italic">
         Meet The Board
       </p>
-      <div className="mx-auto flex max-w-7xl flex-wrap justify-center gap-x-2 gap-y-10 px-4">
+      <div className="mx-auto flex flex-wrap max-w-7xljustify-center gap-x-2 gap-y-10 px-4">
         {boardMembers.map((member) => (
           <BoardCard
             key={member.email}
