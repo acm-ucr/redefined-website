@@ -1,6 +1,7 @@
 import Footer from "@/components/footer";
 
 import "./globals.css";
+import NavBar from "@/components/navBar";
 import {
   Chivo,
   Albert_Sans,
@@ -49,6 +50,7 @@ export default function RootLayout({ children }: LayoutProps) {
       <body
         className={`${chivo.variable} ${albert.variable} ${zilla.variable} ${alfa.variable}`}
       >
+        <NavBar />
         <ReactQueryClientProvider>{children}</ReactQueryClientProvider>
         <Footer />
       </body>
