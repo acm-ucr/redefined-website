@@ -11,7 +11,7 @@ const NavBar = () => {
   return (
     <div className="bg-redefined-olive flex items-center justify-between px-8 py-5">
       <Link
-        href="/home"
+        href="/"
         className="flex h-10 w-50 items-center transition-transform duration-150 ease-out hover:scale-105"
       >
         <Image src={Logo} alt="Logo" />
