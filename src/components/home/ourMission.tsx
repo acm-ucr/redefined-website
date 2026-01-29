@@ -1,1 +1,1 @@
-"Should Describe what the about us component is"
+"Should Describe what the about us component is";
