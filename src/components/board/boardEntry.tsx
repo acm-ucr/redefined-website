@@ -4,7 +4,7 @@ import { boardMembers } from "@/data/boardInfo";
 const BoardEntry = () => {
   return (
     <div className="bg-redefined-olive-50 min-h-screen px-4 py-10">
-      <p className="font-redefined-zilla mb-12 text-center text-6xl font-extrabold text-redefined-rust uppercase italic">
+      <p className="font-redefined-zilla text-redefined-rust mb-12 text-center text-6xl font-extrabold uppercase italic">
         Meet The Board
       </p>
       <div className="mx-auto flex max-w-7xl flex-wrap justify-center gap-x-2 gap-y-10 px-4">
