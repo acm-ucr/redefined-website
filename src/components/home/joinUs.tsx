@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import Picture from "@/public/join_us.png";
+import Picture from "@/public/join_us.webp";
 const JoinUs = () => {
   //things to do when button is clicked--needs to be changed depending on functionality--placeholder functionality currecntly
   const handleClick = () => {

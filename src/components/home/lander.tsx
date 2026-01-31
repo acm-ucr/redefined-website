@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Picture from "@/public/Landing_Pic.png";
+import Picture from "@/public/Landing_Pic.webp";
 const Lander = () => {
   return (
     //adds landing picture and makes it so that the picture's width is the entire screen
