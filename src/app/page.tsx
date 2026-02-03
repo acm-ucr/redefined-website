@@ -3,10 +3,10 @@ import ForOurMembersComponent from "@/components/home/forOurMembers";
 
 const Home = () => {
   return (
-    <div className="">
+    <>
       <OurMissionComponent />
       <ForOurMembersComponent />
-    </div>
+    </>
   );
 };
 
