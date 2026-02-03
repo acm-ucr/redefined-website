@@ -1,21 +1,16 @@
-"use client";
-
-import Image from "next/image";
-import Picture from "@/public/join_us.png";
+import Link from "next/link";
 const JoinUs = () => {
-  //things to do when button is clicked--needs to be changed depending on functionality--placeholder functionality currecntly
-  const handleClick = () => {
-    console.log("Join us clicked");
-    window.location.href = "/join";
-  };
-  //giving picture from figma button functionality
   return (
-    <div className="bg-color-redefined-cream flex justify-center">
-      {/*giving button functionality to join button */}
-      <button onClick={handleClick}>
-        <Image src={Picture} alt="Join us Button" />
-      </button>
-    </div>
+    <Link href="https://discord.com/invite/GrU6QAHJJ" target="_blank">
+      <div className="bg-color-redefined-cream flex justify-center">
+        {/*giving button functionality to join button */}
+
+        <button className="bg-redefined-cream border-redefined-olive h-129px font-redefined-albert w-1/4 rounded-[102px] border-[13px] text-[64px] font-[800] text-[#9E4325] italic">
+          {" "}
+          Join us{" "}
+        </button>
+      </div>
+    </Link>
   );
 };
 
