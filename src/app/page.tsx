@@ -3,7 +3,7 @@ import ForOurMembersComponent from "@/components/home/forOurMembers";
 
 const Home = () => {
   return (
-    <div className="flex h-screen w-screen items-center justify-center">
+    <div className="">
       <OurMissionComponent />
       <ForOurMembersComponent />
     </div>

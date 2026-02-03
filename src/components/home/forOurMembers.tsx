@@ -1,3 +1,6 @@
+import Image from "next/image";
+import crossLogo from "@/public/redefineD_cross.svg";
+
 const ForOurMembersComponent = () => {
   return (
     <section className="bg-redefined-rust rounded-3xl p-10 shadow-[0px_18px_0px_#A39E8A]">
@@ -10,6 +13,7 @@ const ForOurMembersComponent = () => {
       <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
         <div className="bg-redefined-cream relative rounded-3xl p-6 drop-shadow-[-8px_10px_0px_#5d5947]">
           <div className="mb-4 flex items-center gap-3">
+            <Image src={crossLogo} alt="Cross Logo"></Image>
             <p className="bg-redefined-cream text-redefined-rust font-redefined-zilla text-2xl font-bold">
               General Meetings
             </p>
@@ -22,6 +26,7 @@ const ForOurMembersComponent = () => {
 
         <div className="bg-redefined-cream relative rounded-3xl p-6 drop-shadow-[-8px_10px_0px_#5d5947]">
           <div className="mb-4 flex items-center gap-3">
+            <Image src={crossLogo} alt="Cross Logo"></Image>
             <p className="bg-redefined-cream text-redefined-rust font-redefined-zilla text-2xl font-bold">
               Workshops
             </p>
@@ -35,6 +40,7 @@ const ForOurMembersComponent = () => {
 
         <div className="bg-redefined-cream relative rounded-3xl p-6 drop-shadow-[-8px_10px_0px_#5d5947]">
           <div className="mb-4 flex items-center gap-3">
+            <Image src={crossLogo} alt="Cross Logo"></Image>
             <p className="bg-redefined-cream text-redefined-rust font-redefined-zilla text-2xl font-bold">
               Clinics
             </p>
