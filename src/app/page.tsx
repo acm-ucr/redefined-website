@@ -1,8 +1,10 @@
 import OurMissionComponent from "@/components/home/ourMission";
+import Lander from "@/components/home/lander";
 
 const Home = () => {
   return (
-    <div className="flex h-screen w-screen items-center justify-center">
+    <div className="className=flex w-screen items-center justify-center">
+      <Lander />
       <OurMissionComponent />
     </div>
   );
