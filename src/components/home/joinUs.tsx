@@ -6,8 +6,7 @@ const JoinUs = () => {
         {/*giving button functionality to join button */}
 
         <button className="bg-redefined-cream border-redefined-olive h-129px font-redefined-albert w-1/4 rounded-[102px] border-[13px] text-[64px] font-[800] text-[#9E4325] italic">
-          {" "}
-          Join us{" "}
+          Join us
         </button>
       </div>
     </Link>
