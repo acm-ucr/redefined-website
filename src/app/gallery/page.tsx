@@ -1,11 +1,11 @@
 import GalleryEntry from "@/components/gallery/galleryEntry";
-import { galleryImages } from "@/data/galleryEntryInfo"
+import { galleryImages } from "@/data/galleryEntryInfo";
 
 const GalleryPage = () => {
   return (
     <div>
       Gallery
-      <GalleryEntry images={galleryImages}/>
+      <GalleryEntry images={galleryImages} />
     </div>
   );
 };
