@@ -1,12 +1,13 @@
 import OurMissionComponent from "@/components/home/ourMission";
+import ForOurMembersComponent from "@/components/home/forOurMembers";
 import Lander from "@/components/home/lander";
-
 const Home = () => {
   return (
-    <div className="className=flex w-screen items-center justify-center">
-      <Lander />
+    <>
+      <Lander/>
       <OurMissionComponent />
-    </div>
+      <ForOurMembersComponent />
+    </>
   );
 };
 

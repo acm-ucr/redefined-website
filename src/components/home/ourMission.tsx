@@ -21,7 +21,7 @@ const OurMissionComponent = () => {
         </p>
       </div>
       {/*calling button component*/}
-      <div className="w-full gap-2">
+      <div className="w-full gap-2 pb-15">
         <JoinUs />
       </div>
     </div>
