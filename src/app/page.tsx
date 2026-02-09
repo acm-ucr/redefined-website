@@ -4,7 +4,7 @@ import Lander from "@/components/home/lander";
 const Home = () => {
   return (
     <>
-      <Lander/>
+      <Lander />
       <OurMissionComponent />
       <ForOurMembersComponent />
     </>
