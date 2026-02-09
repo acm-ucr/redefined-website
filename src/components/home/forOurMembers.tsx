@@ -3,12 +3,10 @@ import crossLogo from "@/public/redefineD_cross.svg";
 
 const ForOurMembersComponent = () => {
   return (
-    <section className="bg-redefined-rust rounded-3xl shadow-[0px_18px_0px_#A39E8A]">
-      <div className="bg-redefined-cream w-fill mx-2 flex h-20 -translate-y-10 items-center justify-center rounded-full px-14 shadow-[0px_10px_0px_#5d5947]">
-        <p className="font-redefined-chivo text-redefined-rust text-4xl font-bold tracking-widest italic">
-          FOR OUR MEMBERS
-        </p>
-      </div>
+    <div className="bg-redefined-rust rounded-3xl shadow-[0px_18px_0px_#A39E8A]">
+      <p className="bg-redefined-cream w-fill font-redefined-chivo text-redefined-rust mx-2 flex h-20 -translate-y-10 items-center justify-center rounded-full px-14 text-4xl font-bold tracking-widest italic shadow-[0px_10px_0px_#5d5947]">
+        FOR OUR MEMBERS
+      </p>
 
       <div className="grid grid-cols-1 gap-6 px-10 pb-10 md:grid-cols-3">
         <div className="bg-redefined-cream relative rounded-3xl p-6 drop-shadow-[-8px_10px_0px_#5d5947]">
@@ -47,11 +45,11 @@ const ForOurMembersComponent = () => {
           </div>
           <p className="font-redefined-albert text-center text-sm text-black">
             With the nonprofit organization redefineD, we give the opportunity
-            for studnets to volunteer at our free clinic.
+            for students to volunteer at our free clinic.
           </p>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
