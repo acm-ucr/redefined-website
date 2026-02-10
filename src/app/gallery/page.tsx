@@ -3,11 +3,9 @@ import { galleryImages } from "@/data/galleryEntryInfo";
 
 const GalleryPage = () => {
   return (
-    <div>
-      Gallery
+    <>
       <GalleryEntry images={galleryImages} />
-    </div>
+    </>
   );
 };
-
 export default GalleryPage;
