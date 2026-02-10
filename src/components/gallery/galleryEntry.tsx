@@ -13,12 +13,12 @@ interface GalleryEntryProp {
 const GalleryEntry = ({ images }: GalleryEntryProp) => {
   return (
     <div className="relative m-25 flex w-full justify-center">
-      <div className="bg-redefined-rust relative z-10 flex w-10/12 justify-evenly gap-14 rounded-4xl p-14 drop-shadow-[15px_10px_0px_#5d5947]">
+      <div className="bg-redefined-rust relative z-10 flex w-10/12 justify-evenly gap-13 rounded-4xl p-13 drop-shadow-[15px_10px_0px_#5d5947]">
         {images.map((image) => (
           <Image
             alt={image.alt}
             src={image.src}
-            className="h-auto w-3/12 flex-1 object-cover"
+            className="bg-redefined-cream aspect-[5/4] w-3/12 flex-1 rounded-4xl object-cover p-2"
           ></Image>
         ))}
       </div>
@@ -28,7 +28,7 @@ const GalleryEntry = ({ images }: GalleryEntryProp) => {
       <Image
         alt="Picture of heart monitor icon"
         src={heartMonitor}
-        className="absolute -top-27 right-37 z-20"
+        className="absolute -top-26 right-34 z-20"
       ></Image>
     </div>
   );
