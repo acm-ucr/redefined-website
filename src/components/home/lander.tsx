@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Picture from "@/public/Landing_Pic.png";
+import Picture from "@/public/Landing_Pic.webp";
 import Picture_Text from "@/public/Landing_pic_text.svg";
 const Lander = () => {
   return (
