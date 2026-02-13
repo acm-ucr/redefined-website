@@ -5,7 +5,7 @@ const Lander = () => {
   return (
     //adds landing picture and makes it so that the picture's width is the entire screen
 
-    <div className="grid grid-cols-1 grid-rows-1">
+    <div className="grid grid-cols-1 grid-rows-1 place-items-center">
       {/* split svg text and landing banner picture */}
 
       {/* Landing banner image */}
@@ -15,7 +15,7 @@ const Lander = () => {
         alt="Landing Picture"
       />
       <Image
-        className="z-10 col-span-20 col-start-1 row-start-1 self-center justify-self-center"
+        className="z-10 col-start-1 row-start-1"
         src={Picture_Text}
         alt="Landing Picture"
       />
