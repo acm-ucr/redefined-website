@@ -1,5 +1,6 @@
 import Image from "next/image";
 import heartLogo from "@/public/redefineD_heart.svg";
+import JoinUs from "@/components/home/joinUs";
 
 const OurMissionComponent = () => {
   return (
@@ -18,6 +19,10 @@ const OurMissionComponent = () => {
           redefine their lives while inspiring students to grow in purpose and
           create a lasting impact.
         </p>
+      </div>
+      {/*calling button component*/}
+      <div>
+        <JoinUs />
       </div>
     </div>
   );
