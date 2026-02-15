@@ -1,54 +1,36 @@
-import Image, { StaticImageData } from "next/image";
+import GalleryCard from "@/components/gallery/galleryCard";
+import { galleryImages } from "@/data/galleryEntryInfo";
 
-interface ImageProp {
-  src: StaticImageData;
-  alt: string;
-}
-
-interface GalleryEntryProp {
-  title: string;
-  bgColor: string;
-  dropShadow: string;
-  textPos: string;
-  iconPos: string;
-  iconSrc: StaticImageData;
-  iconAlt: string;
-  images: ImageProp[];
-}
-
-const GalleryEntry = ({
-  title,
-  bgColor,
-  dropShadow,
-  textPos,
-  iconPos,
-  iconAlt,
-  iconSrc,
-  images,
-}: GalleryEntryProp) => {
+const GalleryEntry = () => {
   return (
-    <div className="relative flex w-full justify-center">
-      <div
-        className={`relative z-10 flex w-14/15 justify-evenly gap-13 rounded-4xl p-14 ${bgColor} ${dropShadow}`}
-      >
-        {images.map((image) => (
-          <Image
-            alt={image.alt}
-            src={image.src}
-            className={`bg-redefined-cream aspect-[5/4] w-3/12 flex-1 rounded-4xl object-cover p-2`}
-          ></Image>
-        ))}
+    <div className="bg-redefined-cream w-11/12 rounded-4xl p-8">
+      <div className="bg-redefined-taupe flex flex-col gap-33 rounded-4xl pt-33 pb-18">
+        {galleryImages.map(
+          ({
+            id,
+            title,
+            bgColor,
+            dropShadow,
+            textPos,
+            iconPos,
+            iconAlt,
+            iconSrc,
+            images,
+          }) => (
+            <GalleryCard
+              key={id}
+              title={title}
+              bgColor={bgColor}
+              dropShadow={dropShadow}
+              textPos={textPos}
+              iconPos={iconPos}
+              iconAlt={iconAlt}
+              iconSrc={iconSrc}
+              images={images}
+            />
+          ),
+        )}
       </div>
-      <p
-        className={`bg-redefined-cream font-redefined-chivo text-redefined-olive absolute ${textPos} z-0 w-6/12 flex-none rounded-4xl pt-2 pb-8 text-center text-6xl font-semibold tracking-widest italic`}
-      >
-        {title}
-      </p>
-      <Image
-        alt={iconAlt}
-        src={iconSrc}
-        className={`absolute ${iconPos} z-20`}
-      ></Image>
     </div>
   );
 };

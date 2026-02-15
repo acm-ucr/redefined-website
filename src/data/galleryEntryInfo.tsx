@@ -5,6 +5,7 @@ import clipBoard from "@/public/gallery/clipBoardIcon.svg";
 
 export const galleryImages = [
   {
+    id: "card-1",
     title: "General Meetings",
     bgColor: "bg-redefined-rust",
     dropShadow: "drop-shadow-[15px_10px_0px_#5d5947]",
@@ -14,14 +15,17 @@ export const galleryImages = [
     iconAlt: "Icon of heart monitor",
     images: [
       {
+        id: "card-1-img-1",
         src: tablingImage,
         alt: "Tabling image 1",
       },
       {
+        id: "card-1-img-2",
         src: tablingImage,
         alt: "Tabling image 2",
       },
       {
+        id: "card-1-img-3",
         src: tablingImage,
         alt: "Tabling image 3",
       },
@@ -29,6 +33,7 @@ export const galleryImages = [
   },
 
   {
+    id: "card-2",
     title: "Workshops",
     bgColor: "bg-redefined-olive",
     dropShadow: "drop-shadow-[15px_10px_0px_#9e4325]",
@@ -38,14 +43,17 @@ export const galleryImages = [
     iconAlt: "Icon of medicine bottle",
     images: [
       {
+        id: "card-2-img-1",
         src: tablingImage,
         alt: "Tabling image 1",
       },
       {
+        id: "card-2-img-2",
         src: tablingImage,
         alt: "Tabling image 2",
       },
       {
+        id: "card-2-img-3",
         src: tablingImage,
         alt: "Tabling image 3",
       },
@@ -53,6 +61,7 @@ export const galleryImages = [
   },
 
   {
+    id: "card-3",
     title: "Clinics",
     bgColor: "bg-redefined-rust",
     dropShadow: "drop-shadow-[15px_10px_0px_#5d5947]",
@@ -62,14 +71,17 @@ export const galleryImages = [
     iconAlt: "Icon of clipboard",
     images: [
       {
+        id: "card-3-img-1",
         src: tablingImage,
         alt: "Tabling image 1",
       },
       {
+        id: "card-3-img-2",
         src: tablingImage,
         alt: "Tabling image 2",
       },
       {
+        id: "card-3-img-3",
         src: tablingImage,
         alt: "Tabling image 3",
       },
