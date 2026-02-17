@@ -5,7 +5,7 @@ import Line from "@/public/Vector 2.webp";
 const NotFound = () => {
   return (
     <div className="bg-redefined-olive-50 flex h-screen flex-col items-center justify-center">
-      <div className="bg-redefined-cream flex relative h-75 w-150 flex-col items-center justify-center rounded-2xl">
+      <div className="bg-redefined-cream relative flex h-75 w-150 flex-col items-center justify-center rounded-2xl">
         <p className="text-redefined-rust font-redefined-zilla text-7xl font-bold italic">
           404
         </p>
@@ -24,7 +24,6 @@ const NotFound = () => {
         <div className="bg-redefined-olive absolute -z-1 h-75 w-150 -translate-x-4 translate-y-4 rounded-2xl"></div>
       </div>
       <Image src={Line} alt="Line" />
-      
     </div>
   );
 };
