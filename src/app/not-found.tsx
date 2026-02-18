@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import Line from "@/public/Vector 2.webp";
+import Line from "@/public/pulse.svg";
 
 const NotFound = () => {
   return (
