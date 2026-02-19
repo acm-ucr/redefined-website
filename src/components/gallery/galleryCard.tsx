@@ -7,30 +7,39 @@ interface ImageProp {
 }
 
 interface GalleryCardProp {
+  rightOrient: boolean;
+
   title: string;
-  bgColor: string;
-  dropShadow: string;
-  textPos: string;
-  iconPos: string;
+  images: ImageProp[];
   iconSrc: StaticImageData;
   iconAlt: string;
-  images: ImageProp[];
 }
 
 const GalleryCard = ({
   title,
-  bgColor,
-  dropShadow,
-  textPos,
-  iconPos,
-  iconAlt,
   iconSrc,
+  iconAlt,
+  rightOrient,
   images,
 }: GalleryCardProp) => {
+  const style = rightOrient
+    ? {
+        bgColor: "bg-redefined-olive",
+        dropShadow: "drop-shadow-[15px_10px_0px_#9e4325]",
+        textPos: "-top-18 right-16",
+        iconPos: "-top-24 left-25",
+      }
+    : {
+        bgColor: "bg-redefined-rust",
+        dropShadow: "drop-shadow-[15px_10px_0px_#5d5947]",
+        textPos: "-top-18 left-17",
+        iconPos: "-top-26 right-15",
+      };
+
   return (
     <div className="relative flex w-full justify-center">
       <div
-        className={`relative z-10 flex w-14/15 justify-evenly gap-13 rounded-4xl p-14 ${bgColor} ${dropShadow}`}
+        className={`relative z-10 flex w-14/15 justify-evenly gap-13 rounded-4xl p-14 ${style.bgColor} ${style.dropShadow}`}
       >
         {images.map((image) => (
           <Image
@@ -42,14 +51,14 @@ const GalleryCard = ({
         ))}
       </div>
       <p
-        className={`bg-redefined-cream font-redefined-chivo text-redefined-olive absolute ${textPos} z-0 w-6/12 flex-none rounded-4xl pt-2 pb-8 text-center text-6xl font-semibold tracking-widest italic`}
+        className={`bg-redefined-cream font-redefined-chivo text-redefined-olive absolute ${style.textPos} z-0 w-6/12 flex-none rounded-4xl pt-2 pb-8 text-center text-6xl font-semibold tracking-widest italic`}
       >
         {title}
       </p>
       <Image
         alt={iconAlt}
         src={iconSrc}
-        className={`absolute ${iconPos} z-20`}
+        className={`absolute ${style.iconPos} z-20`}
       ></Image>
     </div>
   );
