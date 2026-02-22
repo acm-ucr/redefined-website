@@ -4,7 +4,7 @@ import Line from "@/public/Vector 3.svg";
 
 const GalleryHeader = () => {
   return (
-    <div className="ml-30 grid w-full grid-cols-[auto_1fr] items-center">
+    <div className="-mb-30 ml-30 grid w-full grid-cols-[auto_1fr] items-center">
       {/* Left: Text */}
       <Image src={Text} alt="Gallery" />
 
@@ -13,7 +13,7 @@ const GalleryHeader = () => {
       <Image
         src={Line}
         alt="line design"
-        className="mb-30 -ml-20 h-6/10 w-screen"
+        className="mb-25 -ml-30 h-7/10 w-screen"
       />
     </div>
   );
