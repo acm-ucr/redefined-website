@@ -47,7 +47,7 @@ const GalleryCard = ({
         {title}
       </p>
       <div
-        className={`flex w-9/12 flex-col justify-evenly gap-6 rounded-4xl px-7 pt-9 py-14 leading-4 sm:w-14/15 sm:flex-row sm:gap-13 sm:p-14 ${style.bgColor} ${style.dropShadow}`}
+        className={`flex w-9/12 flex-col justify-evenly gap-6 rounded-4xl px-7 py-14 pt-9 leading-4 sm:w-14/15 sm:flex-row sm:gap-13 sm:p-14 ${style.bgColor} ${style.dropShadow}`}
       >
         {images.map((image) => (
           <Image
