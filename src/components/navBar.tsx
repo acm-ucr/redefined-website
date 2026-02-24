@@ -70,7 +70,7 @@ const NavBar = () => {
 
       {/* close menu on click */}
       {isOpen && (
-        <div className="bg-redefined-olive fixed inset-0 z-40 flex flex-col items-center justify-center p-6">
+        <div className="bg-redefined-olive/90 fixed inset-0 z-40 flex flex-col items-center justify-center p-6 backdrop-blur-sm">
           <div className="bg-redefined-cream relative flex w-full max-w-sm flex-col items-center gap-6 rounded-[40px] py-14">
             <Link
               href="/about"
@@ -81,7 +81,7 @@ const NavBar = () => {
             </Link>
             <Link
               href="/board"
-              onClick={() => setIsOpen(false)}
+              onClick={(e) => e.stopPropagation()}
               className={mobileLinkStyle}
             >
               Board
