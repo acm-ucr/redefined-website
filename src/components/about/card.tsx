@@ -36,7 +36,7 @@ export default function Card() {
           {/* Actual image */}
           <div className="relative h-full overflow-hidden rounded-xl shadow-lg">
             <Image
-              src="/about.png"
+              src="/about.webp"
               alt="People walking"
               fill
               className="rounded-xl object-cover"
@@ -58,7 +58,7 @@ export default function Card() {
 
           {/* Logo aligned bottom right without overlapping */}
           <div className="mt-6 flex justify-end">
-            <Image src="/logo.png" alt="Logo" width={60} height={60} />
+            <Image src="/logo.webp" alt="Logo" width={60} height={60} />
           </div>
         </div>
       </div>
