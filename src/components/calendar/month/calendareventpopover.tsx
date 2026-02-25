@@ -90,12 +90,12 @@ const CalendarEventPopover = ({
               timeZone: "America/Los_Angeles",
             })}
         </span>
-        <span className="overflow-hidden text-ellipsis whitespace-nowrap px-1 pl-1 text-xs">
+        <span className="overflow-hidden px-1 pl-1 text-xs text-ellipsis whitespace-nowrap">
           {title}
         </span>
       </DialogTrigger>
       <DialogOverlay className="bg-gray-400/60">
-        <DialogContent className="z-50 border-2 border-black bg-winc-yellow-200 p-0 text-winc-blue-500 shadow-md">
+        <DialogContent className="bg-winc-yellow-200 text-winc-blue-500 z-50 border-2 border-black p-0 shadow-md">
           <DialogTitle>
             <div className="flex items-center justify-between px-4 pt-2 text-xl font-semibold">
               <p className="truncate">{title}</p>
@@ -104,7 +104,7 @@ const CalendarEventPopover = ({
 
           <div className="rounded-b-xl bg-white px-4 py-3 text-lg">
             <div className="flex">
-              <p className="whitespace-nowrap pr-2">
+              <p className="pr-2 whitespace-nowrap">
                 {date.toLocaleString("default", {
                   month: "short",
                   day: "numeric",
@@ -114,7 +114,7 @@ const CalendarEventPopover = ({
               <div>{hasStartTime && <p>{timeRangeDisplay}</p>}</div>
             </div>
             <p>{location}</p>
-            {description && <p className="pb-4 pt-4">{description}</p>}
+            {description && <p className="pt-4 pb-4">{description}</p>}
           </div>
         </DialogContent>
       </DialogOverlay>

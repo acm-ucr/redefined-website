@@ -78,11 +78,11 @@ const CalendarCall = () => {
 
   return (
     <div>
-      <div className="mb-2 mt-8 w-full border-4 border-winc-red-400" />
+      <div className="border-winc-red-400 mt-8 mb-2 w-full border-4" />
       <p className="bg-winc-red-400 py-4 text-center text-4xl font-bold text-white">
         Programs & Events
       </p>
-      <div className="mb-16 mt-2 w-full border-4 border-winc-red-400" />
+      <div className="border-winc-red-400 mt-2 mb-16 w-full border-4" />
       <UICalendar
         mode="single"
         selected={date}

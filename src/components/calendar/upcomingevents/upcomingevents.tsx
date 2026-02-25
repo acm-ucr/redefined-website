@@ -60,10 +60,10 @@ const UpcomingEvents = () => {
   return (
     <div>
       <div className="flex flex-col items-center pb-8">
-        <p className="mb-4 mt-4 text-center text-4xl font-extrabold leading-none text-winc-blue-500">
+        <p className="text-winc-blue-500 mt-4 mb-4 text-center text-4xl leading-none font-extrabold">
           Upcoming Events
         </p>
-        <div className="w-16 border-2 border-winc-red-400" />
+        <div className="border-winc-red-400 w-16 border-2" />
       </div>
 
       {!isLoading && data && data.futureEvents.length === 0 && (

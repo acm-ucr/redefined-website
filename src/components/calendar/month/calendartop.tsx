@@ -28,7 +28,7 @@ const CalendarTop = ({
 
   return (
     <div className="mx-auto flex w-10/12 flex-col items-center justify-between md:flex-row">
-      <div className="flex w-full items-center justify-center pb-6 text-winc-red-400 md:justify-start md:space-x-4 md:pb-0">
+      <div className="text-winc-red-400 flex w-full items-center justify-center pb-6 md:justify-start md:space-x-4 md:pb-0">
         <button
           onClick={onPrevMonth}
           className="text-3xl transition hover:-translate-x-1 md:text-4xl"
