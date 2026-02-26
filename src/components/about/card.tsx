@@ -1,15 +1,16 @@
 import Image from "next/image";
-import Photo from "@/public/image_2026-02-24_103203242.webp";
-import Ambulance from "@/public/image_2026-02-24_124741981.webp";
+import Photo from "@/public/Photograph.webp";
+import Ambulance from "@/public/Ambulance.webp";
+import { RiDivideFill } from "react-icons/ri";
 
 const About = () => {
   return (
-    <div className="bg-redefined-taupe relative -z-2 flex h-150 w-356 items-center justify-center">
-      <p className="text-redefined-cream font-redefined-chivo absolute translate-x-63 -translate-y-55 text-6xl font-bold tracking-wide italic">
+    <div className="bg-redefined-rust relative m-25 flex h-[58vh] w-[77vw] flex-col rounded-4xl p-8 shadow-[15px_10px_0px_#5d5947]">
+      <p className="text-redefined-cream font-redefined-chivo relative flex -translate-y-15 justify-end text-6xl font-bold italic">
         GET TO KNOW US
       </p>
-      <div className="bg-redefined-rust flex h-110 w-275 items-center rounded-4xl">
-        <p className="text-redefined-cream mr-3 ml-2 w-115 text-center text-xl">
+      <div className="grid grid-cols-2">
+        <p className="text-redefined-cream w-fit shrink pr-2 text-center text-xl">
           redefineD at UCR is a club that stems from the redefineD nonprofit
           organization. At our club, we aim to help students learn about the
           topic of street medicine and providing healthcare services to
@@ -18,20 +19,18 @@ const About = () => {
           our club, you will gain valuable experience, obtain new knowledge, and
           be able to build a strong network of peers.
         </p>
-        <div className="relative h-80 w-140 rounded-4xl">
+        <div className="relative h-80 w-fit rounded-4xl">
           <Image
             src={Photo}
             alt="Photo"
-            className="relative z-2 object-contain"
+            className="relative z-2 object-contain drop-shadow-[15px_10px_0px_#5d5947]"
           ></Image>
-          <div className="bg-redefined-olive absolute h-80 w-140 translate-x-4 -translate-y-77 rounded-4xl"></div>
         </div>
-        <div className="bg-redefined-olive absolute -z-2 h-110 w-275 translate-x-4 translate-y-4 rounded-2xl"></div>
       </div>
       <Image
         src={Ambulance}
         alt="Ambulance"
-        className="absolute h-40 w-90 -translate-x-125 translate-y-50 object-scale-down"
+        className="relative h-40 w-100 -translate-x-8 -translate-y-8 object-contain"
       ></Image>
     </div>
   );
