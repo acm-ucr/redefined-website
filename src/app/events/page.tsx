@@ -1,8 +1,8 @@
-import CalendarCall from "@/components/calendar/calendarcall";
+import Calendar from "@/components/events/CalendarEvents";
 const EventsPage = () => {
   return (
     <>
-      <CalendarCall />
+      <Calendar />
     </>
   );
 };
