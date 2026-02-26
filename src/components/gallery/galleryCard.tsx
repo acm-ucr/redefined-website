@@ -26,35 +26,35 @@ const GalleryCard = ({
     ? {
         bgColor: "bg-redefined-olive",
         dropShadow:
-          "sm:drop-shadow-[15px_10px_0px_#9e4325] drop-shadow-[-8px_5px_0px_#9e4325]",
-        textPos: "sm:-top-18 sm:right-16 -top-7",
+          "md:drop-shadow-[15px_10px_0px_#9e4325] drop-shadow-[-8px_5px_0px_#9e4325]",
+        textPos: "md:-top-18 md:right-16 -top-7",
         iconPos:
-          "sm:-top-24 sm:left-25 sm:right-auto sm:bottom-auto right-9 -bottom-4",
+          "md:-top-24 md:left-25 md:right-auto md:bottom-auto right-9 -bottom-4",
       }
     : {
         bgColor: "bg-redefined-rust",
         dropShadow:
-          "sm:drop-shadow-[15px_10px_0px_#5d5947] drop-shadow-[-8px_5px_0px_#5d5947]",
-        textPos: "sm:-top-18 sm:left-17 -top-7",
-        iconPos: "sm:-top-26 sm:right-15 sm:bottom-auto right-9 -bottom-4",
+          "md:drop-shadow-[15px_10px_0px_#5d5947] drop-shadow-[-8px_5px_0px_#5d5947]",
+        textPos: "md:-top-18 md:left-17 -top-7",
+        iconPos: "md:-top-26 md:right-15 md:bottom-auto right-9 -bottom-4",
       };
 
   return (
     <div className="relative flex w-full justify-center">
       <p
-        className={`bg-redefined-cream font-redefined-chivo text-redefined-olive absolute ${style.textPos} w-8/13 rounded-2xl pt-1 pb-8 text-center text-base font-semibold tracking-tighter italic sm:w-6/12 sm:rounded-4xl sm:pt-2 sm:text-6xl sm:tracking-widest`}
+        className={`bg-redefined-cream font-redefined-chivo text-redefined-olive absolute ${style.textPos} w-8/13 rounded-2xl pt-1 pb-8 text-center text-base font-semibold tracking-tighter italic md:w-6/12 md:rounded-4xl md:pt-2 md:text-6xl md:tracking-widest`}
       >
         {title}
       </p>
       <div
-        className={`flex w-9/12 flex-col justify-evenly gap-6 rounded-4xl px-7 py-14 pt-9 leading-4 sm:w-14/15 sm:flex-row sm:gap-13 sm:p-14 ${style.bgColor} ${style.dropShadow}`}
+        className={`flex w-9/12 flex-col justify-evenly gap-6 rounded-4xl px-7 py-14 pt-9 leading-4 md:w-14/15 md:flex-row md:gap-13 md:p-14 ${style.bgColor} ${style.dropShadow}`}
       >
         {images.map((image) => (
           <Image
             key={image.id}
             alt={image.alt}
             src={image.src}
-            className={`bg-redefined-cream aspect-[5/4] flex-1 rounded-2xl object-cover p-1 sm:w-3/12 sm:rounded-4xl sm:p-2`}
+            className={`bg-redefined-cream mx-auto aspect-[5/4] w-full max-w-[320px] flex-1 rounded-2xl object-cover p-1 md:w-3/12 md:rounded-4xl md:p-2`}
           ></Image>
         ))}
       </div>
@@ -62,7 +62,7 @@ const GalleryCard = ({
       <Image
         alt={iconAlt}
         src={iconSrc}
-        className={`absolute h-1/10 w-auto sm:h-auto ${style.iconPos}`}
+        className={`absolute h-1/10 w-auto md:h-auto ${style.iconPos}`}
       ></Image>
     </div>
   );
