@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Photo from "@/public/Photograph.webp";
 import Ambulance from "@/public/Ambulance.webp";
-import { RiDivideFill } from "react-icons/ri";
 
 const About = () => {
   return (
