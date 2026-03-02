@@ -15,7 +15,7 @@ const NavBar = () => {
     "font-redefined-alfa text-4xl text-redefined-rust hover:opacity-70";
 
   return (
-    <nav className="bg-redefined-olive relative px-8 py-5">
+    <nav className="bg-redefined-olive relative z-[100] px-8 py-5">
       <div className="flex items-center justify-between">
         <Link href="/" className="z-50 flex h-10 w-50 items-center">
           <Image src={Logo} alt="Logo" />
@@ -70,8 +70,8 @@ const NavBar = () => {
 
       {/* close menu on click */}
       {isOpen && (
-        <div className="bg-redefined-olive/90 fixed inset-0 z-40 flex flex-col items-center justify-center p-6 backdrop-blur-sm">
-          <div className="bg-redefined-cream relative flex w-full max-w-sm flex-col items-center gap-6 rounded-[40px] py-14">
+        <div className="bg-redefined-olive/90 absolute top-full left-0 z-50 w-full p-6 backdrop-blur-md md:hidden">
+          <div className="bg-redefined-cream flex w-full flex-col items-center gap-6 rounded-[40px] py-14">
             <Link
               href="/about"
               onClick={() => setIsOpen(false)}
