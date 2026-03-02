@@ -4,7 +4,7 @@ import Ambulance from "@/public/Ambulance.webp";
 
 const About = () => {
   return (
-    <div className="bg-redefined-taupe p-25">
+    <div className="bg-redefined-taupe flex justify-center p-25">
       <div className="bg-redefined-rust relative flex h-[58vh] w-[77vw] flex-col rounded-4xl p-8 shadow-[15px_10px_0px_#5d5947]">
         <p className="text-redefined-cream font-redefined-chivo relative flex -translate-y-15 justify-end text-7xl font-bold italic">
           GET TO KNOW US
