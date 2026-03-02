@@ -43,7 +43,7 @@ const GalleryCard = ({
   return (
     <div className="relative flex w-full justify-center">
       <p
-        className={`bg-redefined-cream font-redefined-chivo text-redefined-olive absolute ${style.textPos} w-8/13 rounded-xl pb-9 text-center text-[6vw] font-semibold tracking-tighter italic md:w-6/12 md:rounded-4xl md:pt-2 md:text-[3.9vw] md:leading-none md:tracking-widest`}
+        className={`bg-redefined-cream font-redefined-chivo text-redefined-olive absolute ${style.textPos} mb-10 w-8/13 rounded-xl pb-9 text-center text-[6vw] font-semibold tracking-tighter italic md:mb-10 md:w-6/12 md:rounded-4xl md:pt-2 md:text-[3.9vw] md:leading-none md:tracking-widest`}
       >
         {title}
       </p>
