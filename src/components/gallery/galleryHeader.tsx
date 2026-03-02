@@ -5,7 +5,7 @@ const GalleryHeader = () => {
   return (
     <div className="-mb-10 ml-30 flex w-full grid-cols-[auto_1fr] items-center">
       {/* Left: Text */}
-      <div className="font-redefined-zilla mt-15 text-[150px] font-[600] tracking-[5%] text-[#5D5947] italic">
+      <div className="font-redefined-zilla mt-15 text-[172px] font-[600] tracking-[5%] text-[#5D5947] italic">
         GALLERY
       </div>
       {/* Right: Line */}
