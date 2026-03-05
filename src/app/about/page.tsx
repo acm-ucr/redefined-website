@@ -1,5 +1,11 @@
+import About from "@/components/about/card";
+
 const AboutPage = () => {
-  return <div>About</div>;
+  return (
+    <>
+      <About />
+    </>
+  );
 };
 
 export default AboutPage;
