@@ -21,7 +21,11 @@ const Lander = () => {
         variants={pictAnimation} initial="initial" whileInView="whileInView"
         className="z-0 col-start-1 row-start-1 grid w-full"
       >
-        <Image src={Picture} alt="Landing Picture" />
+        <Image
+          src={Picture}
+          alt="Landing Picture"
+          className="h-auto w-full"
+        />{" "}
       </motion.div>
 
       <motion.div
