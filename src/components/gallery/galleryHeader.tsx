@@ -3,13 +3,12 @@ import Line from "@/public/pulse.svg";
 
 const GalleryHeader = () => {
   return (
-    <div className="-mb-1 pl-30 flex w-full overflow-hidden items-center">
+    <div className="-mb-1 flex w-full items-center overflow-hidden pl-30">
       {/*Text and tailwind styling for header text*/}
-      <div className="font-redefined-zilla mt-15 text-9xl font-semibold tracking-wide text-redefined-olive italic">
+      <div className="font-redefined-zilla text-redefined-olive mt-15 text-9xl font-semibold tracking-wide italic">
         GALLERY
       </div>
       {/* Pulse line for header and positional styling*/}
-
       <Image
         src={Line}
         alt="line design"
