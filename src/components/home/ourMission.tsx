@@ -9,7 +9,7 @@ const titleAnimation = {
   whileInView: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: "easeOut" },
+    transition: { duration: 0.6, ease: "easeOut" as const },
   },
 };
 
@@ -18,7 +18,7 @@ const boxAnimation = {
   whileInView: {
     opacity: 1,
     x: 0,
-    transition: { duration: 0.7, delay: 0.2, ease: "easeOut" },
+    transition: { duration: 0.7, delay: 0.2, ease: "easeOut" as const },
   },
 };
 
