@@ -5,7 +5,8 @@ import { motion } from "motion/react";
 
 const fadeInAnimation = {
   initial: { opacity: 0 },
-  whileInView: { opacity: 1, y: 0, transition: { duration: 1.2 } },
+  whileInView: { opacity: 1, y: 0 },
+  transition: { duration: 1.2 },
 };
 
 const fadeInAnimationCard = {
@@ -25,9 +26,7 @@ const BoardEntry = () => {
   return (
     <div className="bg-redefined-taupe min-h-screen px-4 py-10">
       <motion.div
-        variants={fadeInAnimation}
-        initial="initial"
-        whileInView="whileInView"
+        {...fadeInAnimation}
         viewport={{ once: true }}
         className="font-redefined-zilla text-redefined-rust text-center text-4xl font-extrabold uppercase italic sm:text-5xl md:mb-8 md:text-6xl lg:mb-10 lg:text-7xl xl:mb-12 xl:text-8xl"
       >
@@ -36,9 +35,7 @@ const BoardEntry = () => {
       <div className="mx-auto grid max-w-7xl grid-cols-1 px-4 md:grid-cols-4 md:gap-y-10 lg:gap-x-16 xl:grid-cols-6 2xl:gap-x-52">
         {boardMembers.map((member, index) => (
           <motion.div
-            variants={fadeInAnimationCard}
-            initial="initial"
-            whileInView="whileInView"
+            {...fadeInAnimationCard}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
             key={index}

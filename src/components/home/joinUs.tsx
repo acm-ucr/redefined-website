@@ -4,11 +4,8 @@ import { motion } from "motion/react";
 
 const buttonAnimation = {
   initial: { opacity: 0, y: 20 },
-  whileInView: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.6, delay: 0.3, ease: "easeOut" as const },
-  },
+  whileInView: { opacity: 1, y: 0 },
+  transition: { duration: 0.6, delay: 0.3, ease: "easeOut" as const },
 };
 
 const JoinUs = () => {
@@ -16,9 +13,7 @@ const JoinUs = () => {
     <div className="bg-redefined-taupe">
       <Link href="https://discord.com/invite/GrU6QAHJJ" target="_blank">
         <motion.div
-          variants={buttonAnimation}
-          initial="initial"
-          whileInView="whileInView"
+          {...buttonAnimation}
           viewport={{ once: true }}
           className="bg-color-redefined-cream flex justify-center"
         >

@@ -6,38 +6,26 @@ import { motion } from "motion/react";
 
 const titleAnimation = {
   initial: { opacity: 0, y: -20 },
-  whileInView: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.6, ease: "easeOut" as const },
-  },
+  whileInView: { opacity: 1, y: 0 },
+  transition: { duration: 0.6, ease: "easeOut" as const },
 };
 
 const imageAnimation = {
   initial: { opacity: 0, x: -20 },
-  whileInView: {
-    opacity: 1,
-    x: 0,
-    transition: { duration: 0.7, delay: 0.2, ease: "easeOut" as const },
-  },
+  whileInView: { opacity: 1, x: 0 },
+  transition: { duration: 0.7, delay: 0.2, ease: "easeOut" as const },
 };
 
 const textAnimation = {
   initial: { opacity: 0, x: 20 },
-  whileInView: {
-    opacity: 1,
-    x: 0,
-    transition: { duration: 0.7, delay: 0.2, ease: "easeOut" as const },
-  },
+  whileInView: { opacity: 1, x: 0 },
+  transition: { duration: 0.7, delay: 0.2, ease: "easeOut" as const },
 };
 
 const iconAnimation = {
   initial: { opacity: 0, y: 20 },
-  whileInView: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.6, delay: 0.4, ease: "easeOut" as const },
-  },
+  whileInView: { opacity: 1, y: 0 },
+  transition: { duration: 0.6, delay: 0.4, ease: "easeOut" as const },
 };
 
 const WhatWeDo = () => {
@@ -45,9 +33,7 @@ const WhatWeDo = () => {
     <div className="bg-redefined-taupe flex justify-center p-8 md:p-20">
       <div className="bg-redefined-sand relative flex w-[95vw] flex-col rounded-4xl p-6 shadow-[-15px_10px_0px_#5d5947] md:p-8">
         <motion.p
-          variants={titleAnimation}
-          initial="initial"
-          whileInView="whileInView"
+          {...titleAnimation}
           viewport={{ once: true }}
           className="text-redefined-rust font-redefined-chivo relative -top-8 -m-4 text-center text-4xl font-bold italic sm:text-5xl md:-top-10 md:-m-8 md:text-left md:text-6xl lg:text-7xl"
         >
@@ -55,9 +41,7 @@ const WhatWeDo = () => {
         </motion.p>
         <div className="grid grid-cols-1 items-center gap-8 xl:grid-cols-2">
           <motion.div
-            variants={imageAnimation}
-            initial="initial"
-            whileInView="whileInView"
+            {...imageAnimation}
             viewport={{ once: true }}
             className="relative z-2 order-1 h-full w-full xl:order-1"
           >
@@ -68,9 +52,7 @@ const WhatWeDo = () => {
             />
           </motion.div>
           <motion.p
-            variants={textAnimation}
-            initial="initial"
-            whileInView="whileInView"
+            {...textAnimation}
             viewport={{ once: true }}
             className="text-redefined-black order-2 mx-auto w-4/5 text-center text-base leading-normal sm:text-lg md:text-xl lg:leading-normal xl:order-2 xl:pl-2 xl:text-left xl:text-2xl xl:leading-normal 2xl:text-3xl 2xl:leading-loose"
           >
@@ -84,9 +66,7 @@ const WhatWeDo = () => {
           </motion.p>
         </div>
         <motion.div
-          variants={iconAnimation}
-          initial="initial"
-          whileInView="whileInView"
+          {...iconAnimation}
           viewport={{ once: true }}
           className="absolute right-4 -bottom-12 z-20 w-16 md:-bottom-16 md:w-28 lg:w-28"
         >
