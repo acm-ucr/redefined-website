@@ -78,7 +78,7 @@ const NavBar = () => {
             </Link>
             <Link
               href="/board"
-              onClick={(e) => e.stopPropagation()}
+              onClick={() => setIsOpen(false)}
               className={mobileLinkStyle}
             >
               Board

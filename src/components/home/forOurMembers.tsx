@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import crossLogo from "@/public/redefineD_cross.svg";
+import crossLogo from "@/public/cross.svg";
 import { motion } from "motion/react";
 
 const titleAnimation = {

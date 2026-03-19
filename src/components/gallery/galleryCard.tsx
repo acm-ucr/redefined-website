@@ -22,7 +22,6 @@ const MotionImage = motion(Image);
 const entryAnimation = {
   initial: { opacity: 0 },
   whileInView: { opacity: 1, transition: { duration: 0.5 } },
-  whileHover: { scale: 1.04, transition: { duration: 0.25 } },
 };
 const pictAnimation = {
   whileHover: { scale: 1.1, transition: { duration: 0.25 } },
@@ -58,7 +57,7 @@ const GalleryCard = ({
       variants={entryAnimation}
       initial="initial"
       whileInView="whileInView"
-      whileHover="whileHover"
+      viewport={{ once: true }}
       className="relative flex w-full justify-center"
     >
       <p
