@@ -29,7 +29,7 @@ const BoardCard = ({ imagePath, name, role, major, email }: BoardCardProps) => {
             <div className="text-redefined-rust font-zilla text-2xl font-bold sm:text-3xl lg:text-4xl 2xl:text-5xl">
               {name}
             </div>
-            <p className="font-redefined-alfa text-redefined-olive text-base uppercase sm:text-lg md:p-2 lg:text-xl 2xl:text-2xl">
+            <p className="font-redefined-alfa text-redefined-olive text-base uppercase sm:text-lg lg:text-xl 2xl:text-2xl">
               {role}
             </p>
             <div className="font-redefined-chivo text-redefined-olive mt-1 space-y-1 text-sm font-semibold sm:mt-2 sm:text-base lg:text-lg 2xl:text-xl">
