@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import Logo from "@/public/redefineD_logo.webp";
+import Logo from "@/public/logo.webp";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -26,7 +26,7 @@ const NavBar = () => {
     <nav className="bg-redefined-olive relative z-[100] px-8 py-5">
       <div className="flex items-center justify-between">
         <Link href="/" className="z-50 flex h-10 w-50 items-center">
-          <Image src={Logo} alt="Logo" />
+          <Image src={Logo} alt="redefineD Logo" />
         </Link>
 
         <div className="hidden gap-10 md:flex">

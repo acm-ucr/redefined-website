@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import heartLogo from "@/public/redefineD_heart.svg";
+import heart from "@/public/home/heart.svg";
 import { motion } from "motion/react";
 
 const titleAnimation = {
@@ -32,7 +32,7 @@ const OurMissionComponent = () => {
           viewport={{ once: true }}
           className="bg-redefined-cream flex w-3/4 flex-col items-center gap-6 rounded-3xl py-5 pr-13 pl-10 drop-shadow-[-20px_20px_0px_#5d5947] lg:flex-row lg:items-start"
         >
-          <Image alt="Picture of heart" src={heartLogo} />
+          <Image alt="Heart" src={heart} />
           <p className="font-redefined-albert text-center text-base leading-9 sm:text-lg md:text-xl lg:text-2xl">
             Our club is dedicated to educating students about street medicine
             and the needs of underserved communities. By working closely with

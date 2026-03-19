@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import groupPhoto from "@/public/home/groupPhoto.webp";
+import ClinicGroup from "@/public/home/clinicGroup.webp";
 import landingTitle from "@/public/home/landingTitle.svg";
 import { motion } from "motion/react";
 
@@ -24,11 +24,7 @@ const Lander = () => {
         viewport={{ once: true }}
         className="z-0 col-start-1 row-start-1 grid w-full"
       >
-        <Image
-          src={groupPhoto}
-          alt="Landing Picture"
-          className="h-auto w-full"
-        />
+        <Image src={ClinicGroup} alt="Clinic Group" className="h-auto w-full" />
       </motion.div>
 
       <motion.div
@@ -38,7 +34,7 @@ const Lander = () => {
       >
         <Image
           src={landingTitle}
-          alt="Landing Picture"
+          alt="Redefined at UCR Title"
           className="mx-auto w-3/4 items-center"
         />
       </motion.div>

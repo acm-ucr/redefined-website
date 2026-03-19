@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import crossLogo from "@/public/cross.svg";
+import cross from "@/public/home/cross.svg";
 import { motion } from "motion/react";
 
 const titleAnimation = {
@@ -34,7 +34,7 @@ const ForOurMembersComponent = () => {
             className="bg-redefined-cream relative flex flex-col items-center rounded-3xl p-6 text-center drop-shadow-[-8px_10px_0px_#5d5947]"
           >
             <div className="mb-4 flex w-full flex-row items-center justify-start gap-3 md:w-auto md:flex-col md:justify-center xl:w-full xl:flex-row xl:justify-start">
-              <Image src={crossLogo} alt="Cross Logo" />
+              <Image src={cross} alt="Cross Logo" />
               <p className="bg-redefined-cream text-redefined-rust font-redefined-zilla text-left text-base font-bold sm:text-lg sm:whitespace-nowrap md:text-center md:text-xl lg:text-2xl xl:text-left">
                 General Meetings
               </p>
@@ -51,7 +51,7 @@ const ForOurMembersComponent = () => {
             className="bg-redefined-cream relative flex flex-col items-center rounded-3xl p-6 text-center drop-shadow-[-8px_10px_0px_#5d5947]"
           >
             <div className="mb-4 flex w-full flex-row items-center justify-start gap-3 md:w-auto md:flex-col md:justify-center xl:w-full xl:flex-row xl:justify-start">
-              <Image src={crossLogo} alt="Cross Logo" />
+              <Image src={cross} alt="Cross Logo" />
               <p className="bg-redefined-cream text-redefined-rust font-redefined-zilla text-left text-base font-bold sm:text-lg md:text-center md:text-xl lg:text-2xl xl:text-left">
                 Workshops
               </p>
@@ -69,7 +69,7 @@ const ForOurMembersComponent = () => {
             className="bg-redefined-cream relative flex flex-col items-center rounded-3xl p-6 text-center drop-shadow-[-8px_10px_0px_#5d5947]"
           >
             <div className="mb-4 flex w-full flex-row items-center justify-start gap-3 md:w-auto md:flex-col md:justify-center xl:w-full xl:flex-row xl:justify-start">
-              <Image src={crossLogo} alt="Cross Logo" />
+              <Image src={cross} alt="Cross Logo" />
               <p className="bg-redefined-cream text-redefined-rust font-redefined-zilla text-left text-base font-bold sm:text-lg md:text-center md:text-xl lg:text-2xl xl:text-left">
                 Clinics
               </p>
