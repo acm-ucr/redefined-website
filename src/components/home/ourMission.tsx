@@ -30,7 +30,7 @@ const OurMissionComponent = () => {
         initial="initial"
         whileInView="whileInView"
         viewport={{ once: true }}
-        className="bg-redefined-cream text-redefined-rust font-redefined-chivo w-11/12 rounded-4xl text-center text-2xl font-medium tracking-widest italic drop-shadow-[0px_17px_0px_#5d5947] sm:text-3xl md:text-4xl lg:p-4 lg:text-6xl"
+        className="bg-redefined-cream text-redefined-rust font-redefined-chivo w-11/12 rounded-4xl text-center text-3xl font-medium tracking-widest italic drop-shadow-[0px_17px_0px_#5d5947] md:text-4xl lg:p-4 lg:text-6xl"
       >
         OUR MISSION
       </motion.p>

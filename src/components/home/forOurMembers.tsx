@@ -37,11 +37,11 @@ const ForOurMembersComponent = () => {
           >
             <div className="mb-4 flex w-full flex-row items-center justify-start gap-3 md:w-auto md:flex-col md:justify-center xl:w-full xl:flex-row xl:justify-start">
               <Image src={crossLogo} alt="Cross Logo" />
-              <p className="bg-redefined-cream text-redefined-rust font-redefined-zilla text-left text-lg font-bold sm:whitespace-nowrap md:text-center md:text-xl lg:text-2xl xl:text-left">
+              <p className="bg-redefined-cream text-redefined-rust font-redefined-zilla text-left text-base font-bold sm:text-lg sm:whitespace-nowrap md:text-center md:text-xl lg:text-2xl xl:text-left">
                 General Meetings
               </p>
             </div>
-            <p className="font-redefined-albert text-base text-black sm:text-sm md:text-lg lg:text-xl">
+            <p className="font-redefined-albert text-sm text-black sm:text-base md:text-lg lg:text-xl">
               These meetings aim to spread awareness and education about street
               medicine and healthcare for marginalized communities.
             </p>
@@ -56,11 +56,11 @@ const ForOurMembersComponent = () => {
           >
             <div className="mb-4 flex w-full flex-row items-center justify-start gap-3 md:w-auto md:flex-col md:justify-center xl:w-full xl:flex-row xl:justify-start">
               <Image src={crossLogo} alt="Cross Logo" />
-              <p className="bg-redefined-cream text-redefined-rust font-redefined-zilla text-left text-lg font-bold md:text-center md:text-xl lg:text-2xl xl:text-left">
+              <p className="bg-redefined-cream text-redefined-rust font-redefined-zilla text-left text-base font-bold sm:text-lg md:text-center md:text-xl lg:text-2xl xl:text-left">
                 Workshops
               </p>
             </div>
-            <p className="font-redefined-albert text-base text-black sm:text-sm md:text-lg lg:text-xl">
+            <p className="font-redefined-albert text-sm text-black sm:text-base md:text-lg lg:text-xl">
               We will provide various activities to help students actively learn
               and participate in skills that would make them successful in
               street medicine.
@@ -76,11 +76,11 @@ const ForOurMembersComponent = () => {
           >
             <div className="mb-4 flex w-full flex-row items-center justify-start gap-3 md:w-auto md:flex-col md:justify-center xl:w-full xl:flex-row xl:justify-start">
               <Image src={crossLogo} alt="Cross Logo" />
-              <p className="bg-redefined-cream text-redefined-rust font-redefined-zilla text-left text-lg font-bold md:text-center md:text-xl lg:text-2xl xl:text-left">
+              <p className="bg-redefined-cream text-redefined-rust font-redefined-zilla text-left text-base font-bold sm:text-lg md:text-center md:text-xl lg:text-2xl xl:text-left">
                 Clinics
               </p>
             </div>
-            <p className="font-redefined-albert text-base text-black sm:text-sm md:text-lg lg:text-xl">
+            <p className="font-redefined-albert text-sm text-black sm:text-base md:text-lg lg:text-xl">
               With the nonprofit organization redefineD, we give the opportunity
               for students to volunteer at our free clinic.
             </p>

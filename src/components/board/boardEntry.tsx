@@ -13,19 +13,27 @@ const fadeInAnimationCard = {
   whileInView: { opacity: 1, y: 0 },
 };
 
+const gridClasses = [
+  "flex w-full justify-center md:col-span-2 xl:col-span-2",
+  "flex w-full justify-center md:col-span-2 xl:col-span-2",
+  "flex w-full justify-center md:col-span-2 xl:col-span-2",
+  "flex w-full justify-center md:col-span-2 xl:col-start-2 xl:col-span-2",
+  "flex w-full justify-center md:col-start-2 md:col-span-2 xl:col-start-4 xl:col-span-2",
+];
+
 const BoardEntry = () => {
   return (
-    <div className="bg-redefined-olive-50 min-h-screen px-4 py-10">
+    <div className="bg-redefined-taupe min-h-screen px-4 py-10">
       <motion.div
         variants={fadeInAnimation}
         initial="initial"
         whileInView="whileInView"
         viewport={{ once: true }}
-        className="font-redefined-zilla text-redefined-rust mb-12 text-center text-6xl font-extrabold uppercase italic"
+        className="font-redefined-zilla text-redefined-rust text-center text-4xl font-extrabold uppercase italic sm:text-5xl md:mb-8 md:text-6xl lg:mb-10 lg:text-7xl xl:mb-12 xl:text-8xl"
       >
         Meet The Board
       </motion.div>
-      <div className="mx-auto flex max-w-7xl flex-wrap justify-center gap-x-2 gap-y-10 px-4">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 px-4 md:grid-cols-4 md:gap-y-10 lg:gap-x-16 xl:grid-cols-6 2xl:gap-x-52">
         {boardMembers.map((member, index) => (
           <motion.div
             variants={fadeInAnimationCard}
@@ -34,6 +42,10 @@ const BoardEntry = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
             key={index}
+            className={
+              gridClasses[index] ||
+              "flex w-full justify-center md:col-span-2 xl:col-span-2"
+            }
           >
             <BoardCard
               imagePath={member.imagePath}
