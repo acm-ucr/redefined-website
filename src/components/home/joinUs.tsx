@@ -1,9 +1,10 @@
 import Link from "next/link";
+
 const JoinUs = () => {
   return (
     <Link href="https://discord.com/invite/GrU6QAHJJ" target="_blank">
-      <div className="bg-color-redefined-cream flex justify-center">
-        <button className="bg-redefined-cream border-redefined-olive h-129px font-redefined-albert mb-11 w-[400px] rounded-[102px] border-[13px] text-[64px] font-[800] text-[#9E4325] italic">
+      <div className="bg-color-redefined-cream flex justify-center md:p-10">
+        <button className="bg-redefined-cream border-redefined-olive font-redefined-albert text-redefined-rust mb-11 cursor-pointer rounded-full border-10 p-6 text-4xl font-bold transition-transform duration-300 hover:scale-105 md:w-100 md:text-7xl lg:w-100">
           Join Us!
         </button>
       </div>

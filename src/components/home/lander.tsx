@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
-import Picture from "@/public/Landing_Pic.webp";
-import Picture_Text from "@/public/Landing_pic_text.svg";
+import groupPhoto from "@/public/home/groupPhoto.webp";
+import landingTitle from "@/public/home/landingTitle.svg";
 import { motion } from "motion/react";
 
 const pictAnimation = {
@@ -21,22 +21,28 @@ const Lander = () => {
         variants={pictAnimation}
         initial="initial"
         whileInView="whileInView"
+        viewport={{ once: true }}
         className="z-0 col-start-1 row-start-1 grid w-full"
       >
         <Image
-          src={Picture}
+          src={groupPhoto}
           alt="Landing Picture"
           className="h-auto w-full"
-        />{" "}
+        />
       </motion.div>
 
       <motion.div
         variants={textAnimation}
         initial="initial"
         whileInView="whileInView"
+        viewport={{ once: true }}
         className="z-10 col-start-1 row-start-1"
       >
-        <Image src={Picture_Text} alt="Landing Picture" />
+        <Image
+          src={landingTitle}
+          alt="Landing Picture"
+          className="mx-auto w-3/4 items-center"
+        />
       </motion.div>
     </div>
   );

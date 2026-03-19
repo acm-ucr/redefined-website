@@ -21,7 +21,6 @@ const NavBar = () => {
           <Image src={Logo} alt="Logo" />
         </Link>
 
-        {/* desktop section */}
         <div className="hidden gap-10 md:flex">
           <Link
             href="/about"
@@ -49,7 +48,6 @@ const NavBar = () => {
           </Link>
         </div>
 
-        {/* layer z-50 on top md:hidden mobile section */}
         <button
           className="z-50 flex h-8 w-8 items-center justify-center md:hidden"
           onClick={() => setIsOpen(!isOpen)}
@@ -68,7 +66,6 @@ const NavBar = () => {
         </button>
       </div>
 
-      {/* close menu on click */}
       {isOpen && (
         <div className="bg-redefined-olive/90 absolute top-full left-0 z-50 w-full p-6 backdrop-blur-md md:hidden">
           <div className="bg-redefined-cream flex w-full flex-col items-center gap-6 rounded-[40px] py-14">
