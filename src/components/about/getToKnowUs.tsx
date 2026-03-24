@@ -31,7 +31,7 @@ const iconAnimation = {
 const GetToKnowUs = () => {
   return (
     <div className="bg-redefined-taupe flex justify-center px-8 pt-20 pb-16 md:px-20 md:pt-24 md:pb-20">
-      <div className="bg-redefined-rust relative flex w-[95vw] flex-col rounded-4xl p-6 shadow-[15px_10px_0px_#5d5947] md:p-8">
+      <div className="bg-redefined-rust relative flex w-[95vw] flex-col rounded-4xl p-6 shadow-[15px_15px_0px_#5d5947] md:p-8">
         <motion.p
           {...titleAnimation}
           viewport={{ once: true }}

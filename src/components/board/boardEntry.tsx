@@ -32,7 +32,7 @@ const BoardEntry = () => {
       >
         Meet The Board
       </motion.div>
-      <div className="mx-auto grid max-w-7xl grid-cols-1 px-4 md:grid-cols-4 md:gap-y-10 lg:gap-x-16 xl:grid-cols-6 2xl:gap-x-52">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 justify-center px-4 md:grid-cols-4 md:gap-y-10 lg:gap-x-16 xl:grid-cols-6 2xl:gap-x-52">
         {boardMembers.map((member, index) => (
           <motion.div
             {...fadeInAnimationCard}

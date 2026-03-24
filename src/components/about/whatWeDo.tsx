@@ -31,7 +31,7 @@ const iconAnimation = {
 const WhatWeDo = () => {
   return (
     <div className="bg-redefined-taupe flex justify-center p-8 md:p-20">
-      <div className="bg-redefined-sand relative flex w-[95vw] flex-col rounded-4xl p-6 shadow-[-15px_10px_0px_#5d5947] md:p-8">
+      <div className="bg-redefined-sand relative flex w-[95vw] flex-col rounded-4xl p-8 shadow-[-15px_15px_0px_#5d5947]">
         <motion.p
           {...titleAnimation}
           viewport={{ once: true }}
@@ -48,7 +48,7 @@ const WhatWeDo = () => {
             <Image
               src={clinic}
               alt="Clinic Photo"
-              className="h-full w-full object-contain drop-shadow-[-15px_10px_0px_#5d5947]"
+              className="h-full w-full object-contain drop-shadow-[-15px_10px_0px_#9e4325]"
             />
           </motion.div>
           <motion.p

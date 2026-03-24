@@ -26,16 +26,16 @@ const BoardCard = ({ imagePath, name, role, major, email }: BoardCardProps) => {
           </div>
 
           <div className="flex flex-col items-center gap-1 px-2 text-center">
-            <div className="text-redefined-rust font-zilla text-2xl font-bold sm:text-3xl lg:text-4xl 2xl:text-5xl">
+            <div className="text-redefined-rust font-redefined-zilla text-2xl font-bold sm:text-3xl lg:text-4xl 2xl:text-5xl">
               {name}
             </div>
-            <p className="font-redefined-alfa text-redefined-olive text-base uppercase sm:text-lg lg:text-xl 2xl:text-2xl">
+            <p className="font-redefined-albert text-redefined-olive text-base font-bold uppercase sm:text-lg lg:text-xl 2xl:text-2xl">
               {role}
             </p>
-            <div className="font-redefined-chivo text-redefined-olive mt-1 space-y-1 text-sm font-semibold sm:mt-2 sm:text-base lg:text-lg 2xl:text-xl">
+            <div className="font-redefined-albert text-redefined-olive mt-1 space-y-1 text-sm font-semibold sm:mt-2 sm:text-base lg:text-lg 2xl:text-xl">
               <p>{major}</p>
             </div>
-            <p className="text-redefined-olive mt-1 text-xs font-semibold break-all italic sm:mt-2 sm:text-sm lg:text-base 2xl:text-lg">
+            <p className="text-redefined-albert mt-1 text-xs font-semibold break-all italic sm:mt-2 sm:text-sm lg:text-base 2xl:text-lg">
               {email}
             </p>
           </div>
