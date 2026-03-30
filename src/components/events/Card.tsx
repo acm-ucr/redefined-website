@@ -1,37 +1,35 @@
 "use client";
+import Image, { StaticImageData } from "next/image";
+
 interface CardProps {
   title: string;
   location: string;
-  description: string;
-  month: string;
-  day: string;
+  date: string;
   time: string;
+  image: StaticImageData;
+  index: number;
 }
 
-const Card = ({
-  title,
-  location,
-  description,
-  month,
-  day,
-  time,
-}: CardProps) => {
+const Card = ({ title, location, date, time, image, index }: CardProps) => {
+  const mode = index % 2 == 0;
+  const lineStyling = `h-1 w-full border-0 ${mode ? " bg-redefined-rust" : " bg-redefined-cream"}`;
   return (
-    <div className="flex w-[95%] flex-col md:w-full md:flex-row">
-      <div className="border-vsa-green-400 bg-vsa-green-300 flex w-full flex-row items-center justify-around rounded-t-md border-2 p-3 text-center text-white md:w-1/4 md:flex-col md:justify-center md:rounded-l-md md:rounded-tr-none md:p-1">
-        <p className="text-2xl font-bold md:text-3xl">{month}</p>
-        <p className="text-2xl font-bold md:text-3xl">{day}</p>
+    <div className="flex w-[33vw] flex-col">
+      <p
+        className={`text-center text-xl font-bold md:text-2xl ${mode ? "text-redefined-cream bg-redefined-rust" : "text-redefined-rust bg-redefined-cream"}`}
+      >
+        {title}
+      </p>
+      <div
+        className={`${mode ? "text-redefined-rust bg-redefined-cream" : "text-redefined-cream bg-redefined-rust"} flex flex-col items-center justify-around rounded-t-md p-3 text-center`}
+      >
+        <hr className={lineStyling} />
+        <p className="text-2xl font-bold md:text-3xl">{date}</p>
         <p className="font-vsa-alt pt-0 text-base md:pt-3 md:text-lg">{time}</p>
+        <p className="text-base font-bold md:text-lg">{location}</p>
+        <hr className={lineStyling} />
       </div>
-      <div className="border-vsa-green-400 bg-vsa-yellow-100 w-full rounded-b-md border-2 border-t-0 p-4 text-left md:rounded-r-md md:rounded-bl-none md:border-t-2 md:border-l-0">
-        <p className="text-vsa-pink-300 text-xl font-bold md:text-2xl">
-          {title}
-        </p>
-        <p className="text-base font-bold text-black md:text-lg">{location}</p>
-        <p className="font-vsa-alt text-vsa-brown pt-2 text-sm md:pt-3">
-          {description}
-        </p>
-      </div>
+      <Image src={image} alt="Event Icon" />
     </div>
   );
 };
