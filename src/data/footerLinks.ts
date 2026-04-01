@@ -10,7 +10,7 @@ export const footerLinks = [
   },
   {
     name: "Discord",
-    href: "https://discord.com/invite/GrU6QAHJJp",
+    href: "https://discord.gg/drvDqgG3tP",
     icon: RxDiscordLogo,
   },
   {
