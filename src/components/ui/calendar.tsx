@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { ChevronDownIcon, StepBack, StepForward } from "lucide-react";
+import { ChevronDownIcon, ChevronLeft, ChevronRight } from "lucide-react";
 import { DayPicker } from "react-day-picker";
 
 import { cn } from "@/lib/utils";
@@ -254,7 +254,7 @@ function Calendar({
                   {monthName} {year}
                 </h2>
                 <div className="absolute right-0 flex h-full flex-row items-center justify-center pr-4">
-                  <StepBack
+                  <ChevronLeft
                     className="text-redefined-cream mr-2 size-5 cursor-pointer transition-opacity hover:opacity-75"
                     onClick={() => {
                       const prevMonth = new Date(currentMonth);
@@ -262,7 +262,7 @@ function Calendar({
                       setCurrentMonth(prevMonth);
                     }}
                   />
-                  <StepForward
+                  <ChevronRight
                     className="text-redefined-cream size-5 cursor-pointer transition-opacity hover:opacity-75"
                     onClick={() => {
                       const nextMonth = new Date(currentMonth);
@@ -278,7 +278,7 @@ function Calendar({
           Chevron: ({ className, orientation, ...props }) => {
             if (orientation === "left") {
               return (
-                <StepBack
+                <ChevronLeft
                   className={cn("text-redefined-cream size-4", className)}
                   {...props}
                 />
@@ -286,7 +286,7 @@ function Calendar({
             }
             if (orientation === "right") {
               return (
-                <StepForward
+                <ChevronRight
                   className={cn("text-redefined-cream size-4", className)}
                   {...props}
                 />

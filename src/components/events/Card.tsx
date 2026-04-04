@@ -12,28 +12,28 @@ interface CardProps {
   index: number;
 }
 
-const icons = [board, bottle, monitor];
+const icons = [monitor, bottle, board];
 const Card = ({ title, location, date, time, index }: CardProps) => {
   const mode = index % 2 == 0;
   const lineStyling = `h-1 w-full rounded-full border-0 ${mode ? " bg-redefined-rust" : " bg-redefined-cream"}`;
   const icon = icons[index % 3];
   return (
-    <div className="relative flex w-[33vw] flex-col place-items-center">
+    <div className="relative m-10 flex w-[33vw] flex-col place-items-center">
       <p
-        className={`w-4/5 text-center text-xl font-bold md:text-2xl ${mode ? "text-redefined-cream bg-redefined-rust" : "text-redefined-rust bg-redefined-cream"}`}
+        className={`font-redefined-zilla -mb-4 w-9/10 rounded-t-3xl p-4 pb-7 text-center text-xl font-bold md:text-2xl ${mode ? "text-redefined-cream bg-redefined-rust" : "text-redefined-rust bg-redefined-cream"}`}
       >
         {title}
       </p>
       <div
-        className={`w-full rounded-4xl py-12 ${mode ? "text-redefined-rust bg-redefined-cream" : "text-redefined-cream bg-redefined-rust"} flex flex-col items-center justify-around rounded-t-md p-3 text-center`}
+        className={`h-80 w-full rounded-4xl py-12 ${mode ? "text-redefined-rust bg-redefined-cream shadow-[-10px_10px_0_var(--color-redefined-rust)]" : "text-redefined-cream bg-redefined-rust shadow-[-10px_10px_0_var(--color-redefined-cream)]"} font-redefined-chivo flex flex-col items-center justify-around p-3 text-center text-4xl font-medium`}
       >
         <hr className={lineStyling} />
-        <p className="text-2xl font-bold md:text-3xl">{date}</p>
-        <p className="font-vsa-alt pt-0 text-base md:pt-3 md:text-lg">{time}</p>
+        <p className="text-4xl">{date}</p>
+        <p className="font-vsa-alt pt-3 text-base">{time}</p>
         <p className="text-base font-bold md:text-lg">{location}</p>
         <hr className={lineStyling} />
       </div>
-      <Image className="absolute right-0 bottom-0" src={icon} alt="Icon" />
+      <Image className="absolute right-0 bottom-2 h-11" src={icon} alt="Icon" />
     </div>
   );
 };
