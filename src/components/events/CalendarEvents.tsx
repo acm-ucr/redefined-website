@@ -59,7 +59,7 @@ const Events = () => {
           open={Object.keys(current).length > 0}
           onOpenChange={() => setCurrent({})}
         >
-          <DialogContent className="border-vsa-green-200 max-w-sm border-4 sm:max-w-2xl sm:p-8">
+          <DialogContent className="border-redefined-rust bg-redefined-cream max-w-sm border-4 sm:max-w-2xl sm:p-8">
             <DialogHeader>
               <DialogTitle>
                 <p className="text-4xl font-medium">{current.title}</p>
@@ -80,14 +80,14 @@ const Events = () => {
                   })}
                 </div>
               </DialogTitle>
-              <DialogDescription className="font-vsa-main relative text-black">
+              <DialogDescription className="font-redefined-chivo relative text-black">
                 {current.description}
               </DialogDescription>
             </DialogHeader>
           </DialogContent>
         </Dialog>
       )}
-      <div className="border-vsa-green-400 mx-auto my-12 flex w-full flex-col rounded-xl border-4 bg-white p-16 pb-12 md:w-10/12">
+      <div className="mx-auto my-12 flex w-full flex-col rounded-xl border-4 bg-white p-16 pb-12 md:w-10/12">
         <div>
           <Calendar
             mode="single"

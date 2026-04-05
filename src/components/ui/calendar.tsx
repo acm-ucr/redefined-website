@@ -75,8 +75,8 @@ const CalendarDayCell = ({
   return (
     <div
       className={`${
-        isToday ? "" : currentMonth ? "bg-transparent" : "text-vsa-green-300"
-      } no-scrollbar group border-redefined-olive flex h-fit w-full flex-col items-end overflow-y-auto border-r-2 p-0 align-top last:border-r-0`}
+        isToday ? "" : currentMonth ? "bg-transparent" : "bg-transparent"
+      } no-scrollbar group border-redefined-olive flex h-24 w-full flex-col items-end overflow-y-auto border-r-2 p-0 align-top last:border-r-0`}
     >
       <div
         className={cn(
@@ -114,7 +114,7 @@ const CalendarDayCell = ({
                   initial="hidden"
                   whileInView="show"
                   viewport={{ once: true, amount: 0.2 }}
-                  className="bg-redefined-cream z-10 mb-1 flex w-full cursor-pointer rounded-xl p-1 text-center font-medium transition hover:opacity-60"
+                  className="bg-redefined-rust z-10 mb-1 flex h-7 w-full cursor-pointer rounded-xl p-1 text-center font-medium transition hover:opacity-60"
                   onClick={() =>
                     setCurrent({ title, start, end, location, description })
                   }
@@ -172,7 +172,7 @@ function Calendar({
           ...formatters,
         }}
         classNames={{
-          root: cn("w-full max-w-7xl mx-auto bg-redefined-cream"),
+          root: cn("w-full h-fit max-w-7xl mx-auto bg-redefined-cream"),
           months: cn("flex gap-4 flex-col md:flex-row relative"),
           month: cn(
             "flex flex-col w-full items-center sm:items-stretch border-collapse [&_tr:last-child_td]:border-b-0",
@@ -206,7 +206,7 @@ function Calendar({
           ),
           table: cn("w-full border-collapse table-fixed grid grid-cols-5"),
           weekdays: cn(
-            "grid grid-cols-7 text-center text-sm bg-redefined-cream border-redefined-olive border-b-2",
+            "grid grid-cols-7 h-fit text-center text-sm bg-redefined-cream border-redefined-olive border-b-2",
           ),
           weekday: cn(
             "text-muted-foreground flex-1 text-xl sm:text-3xl select-none font-redefined-zilla text-redefined-olive border-redefined-olive border-r-2 last:border-r-0",
