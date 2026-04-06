@@ -75,19 +75,19 @@ const CalendarDayCell = ({
   return (
     <div
       className={`${
-        isToday ? "" : currentMonth ? "bg-transparent" : "bg-transparent"
-      } no-scrollbar group border-redefined-olive flex h-24 w-full flex-col items-end overflow-y-auto border-r-2 p-0 align-top last:border-r-0`}
+        isToday ? "" : currentMonth ? "" : "text-redefined-olive-50 opacity-80"
+      } group border-redefined-olive flex h-24 w-full flex-col items-end overflow-hidden overflow-y-auto border-r-1 p-0 align-top last:border-r-0`}
     >
       <div
         className={cn(
-          "group-hover:bg-redefined-olive relative w-full flex-1 transition-colors group-hover:rounded-xl",
+          "group-hover:bg-redefined-olive-50 relative w-full flex-1 transition-colors",
           isToday && "bg-none bg-contain bg-center bg-no-repeat",
         )}
       >
         <div
           className={`${
             currentMonth ? "" : "opacity-80"
-          } text-fit text-redefined-olive font-redefined-chivo top-0 m-1 rounded-xl bg-transparent px-1 text-start font-semibold md:text-right md:text-xl`}
+          } text-redefined-olive font-redefined-chivo top-0 m-1 w-full rounded-xl bg-transparent px-1 text-start font-semibold md:text-right md:text-xl`}
         >
           {isToday ? (
             <div className="bg-redefined-taupe ml-auto flex h-5 w-5 items-center justify-center rounded-full font-semibold text-black sm:h-8 sm:w-8">
@@ -114,12 +114,12 @@ const CalendarDayCell = ({
                   initial="hidden"
                   whileInView="show"
                   viewport={{ once: true, amount: 0.2 }}
-                  className="bg-redefined-rust z-10 mb-1 flex h-7 w-full cursor-pointer rounded-xl p-1 text-center font-medium transition hover:opacity-60"
+                  className="bg-redefined-rust z-10 mb-1 flex h-7 w-full cursor-pointer p-1 text-center font-medium transition hover:opacity-60"
                   onClick={() =>
                     setCurrent({ title, start, end, location, description })
                   }
                 >
-                  <div className="hidden flex-col leading-tight text-black md:flex">
+                  <div className="text-redefined-cream flex flex-col leading-tight">
                     <div className="truncate font-semibold">{title}</div>
                   </div>
                 </motion.div>
@@ -168,14 +168,16 @@ function Calendar({
         captionLayout="label"
         formatters={{
           formatWeekdayName: (weekday) =>
-            weekday.toLocaleString("en-US", { weekday: "short" }),
+            weekday.toLocaleString("en-US", { weekday: "short" }).toUpperCase(),
           ...formatters,
         }}
         classNames={{
-          root: cn("w-full h-fit max-w-7xl mx-auto bg-redefined-cream"),
+          root: cn(
+            "w-full h-fit max-w-7xl mx-auto bg-redefined-cream rounded-3xl relative",
+          ),
           months: cn("flex gap-4 flex-col md:flex-row relative"),
           month: cn(
-            "flex flex-col w-full items-center sm:items-stretch border-collapse [&_tr:last-child_td]:border-b-0",
+            "flex flex-col w-full items-center items-stretch border-collapse [&_tr:last-child_td]:border-b-0",
           ),
           nav: cn(
             "flex items-center w-full hidden justify-between px-4:md px-8 py-2 scale-125",
@@ -204,16 +206,16 @@ function Calendar({
               ? "text-4xl"
               : "rounded-md pl-2 pr-1 flex items-center gap-1 text-sm h-8 [&>svg]:text-muted-foreground [&>svg]:size-3.5",
           ),
-          table: cn("w-full border-collapse table-fixed grid grid-cols-5"),
+          table: cn("border-collapse table-fixed grid grid-cols-5"),
           weekdays: cn(
-            "grid grid-cols-7 h-fit text-center text-sm bg-redefined-cream border-redefined-olive border-b-2",
+            "grid grid-cols-7 h-fit  text-center text-sm bg-redefined-cream border-redefined-olive border-b-1",
           ),
           weekday: cn(
-            "text-muted-foreground flex-1 text-xl sm:text-3xl select-none font-redefined-zilla text-redefined-olive border-redefined-olive border-r-2 last:border-r-0",
+            "flex-1 text-xl sm:text-3xl w-full grid-flow-col auto-cols-fr select-none font-redefined-zilla font-semibold text-redefined-olive border-redefined-olive border-r-1 last:border-r-0",
           ),
           // Applied bottom borders to the rows, skipping the last row
           week: cn(
-            "grid grid-cols-7 w-full font-vsa-alt font-semibold border-b-2 border-redefined-olive last:border-b-0",
+            "grid grid-cols-7 w-full font-vsa-alt font-semibold border-b-1 border-redefined-olive last:border-b-0",
           ),
           week_number_header: cn("select-none w-(--cell-size)"),
           week_number: cn("text-[0.8rem] select-none text-muted-foreground"),
@@ -225,7 +227,7 @@ function Calendar({
             "bg-accent text-accent-foreground rounded-md data-[selected=true]:rounded-md",
           ),
           outside: cn(
-            "text-muted-foreground aria-selected:text-muted-foreground",
+            "text-muted-foreground aria-selected:text-muted-foreground text-white",
           ),
           disabled: cn("text-muted-foreground opacity-50"),
           hidden: cn("invisible"),
@@ -249,7 +251,7 @@ function Calendar({
             const year = date.getFullYear();
 
             return (
-              <div className="bg-redefined-rust relative grid -translate-1 justify-items-center rounded-lg p-3">
+              <div className="bg-redefined-rust relative -top-4 -mb-5 grid w-full -translate-1 justify-items-center rounded-3xl p-3">
                 <h2 className="text-redefined-cream font-redefined-zilla off text-2xl font-bold sm:text-4xl">
                   {monthName} {year}
                 </h2>

@@ -15,6 +15,11 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 
+import { isAfter, isSameDay } from "date-fns";
+import EventTitle from "@/components/events/EventTitle";
+import UpcomingEvents from "@/components/events/UpcomingEvents";
+import { CalendarEvent } from "@/components/events/types";
+
 const Events = () => {
   const [current, setCurrent] = useState<EventProps>({});
   const today = new Date();
@@ -26,7 +31,7 @@ const Events = () => {
   ).toISOString();
   today.setHours(0, 0, 0, 0);
 
-  const { isPending, data } = useQuery({
+  const { isPending, data = [] } = useQuery({
     queryKey: ["repoData"],
     queryFn: async () => {
       const response =
@@ -41,17 +46,27 @@ const Events = () => {
 
       const events = response.items.map(
         ({ start, end, location, description, summary }: GoogleEventProps) => ({
-          start: start.dateTime,
-          end: end.dateTime,
-          location,
+          start: new Date(start.dateTime),
+          end: new Date(end.dateTime),
+          location: location || "TBA",
           description,
-          title: summary,
+          title: summary || "No Title",
         }),
       );
       return events;
     },
   });
   console.log("Fetched calendar events:", data);
+  const upcomingEvents = data
+    .filter(
+      (e: CalendarEvent) =>
+        isAfter(e.start, Date()) || isSameDay(e.start, new Date()),
+    )
+    .sort(
+      (a: CalendarEvent, b: CalendarEvent) =>
+        a.start.getTime() - b.start.getTime(),
+    )
+    .slice(0, 3);
   return (
     <>
       {!isPending && (
@@ -59,12 +74,24 @@ const Events = () => {
           open={Object.keys(current).length > 0}
           onOpenChange={() => setCurrent({})}
         >
-          <DialogContent className="border-redefined-rust bg-redefined-cream max-w-sm border-4 sm:max-w-2xl sm:p-8">
+          <DialogContent className="border-redefined-rust bg-redefined-cream max-w-sm rounded-4xl border-4 sm:max-w-2xl sm:p-8">
             <DialogHeader>
               <DialogTitle>
-                <p className="text-4xl font-medium">{current.title}</p>
-                <div className="font-openSans my-2 flex flex-col gap-1">
-                  <p>Location: {current.location}</p>
+                <div className="font-redefined-zilla relative flex place-content-between text-4xl">
+                  <p>{current.title}</p>
+                  <p>
+                    {new Date(current.start as string).toLocaleDateString(
+                      "en-US",
+                      {
+                        month: "numeric",
+                        day: "numeric",
+                        year: "numeric",
+                      },
+                    )}
+                  </p>
+                </div>
+
+                <div className="font-redefined-zilla my-2 flex flex-col gap-1 font-normal">
                   Time:{" "}
                   {new Date(current.start as string).toLocaleTimeString(
                     "en-US",
@@ -73,11 +100,12 @@ const Events = () => {
                       minute: "2-digit",
                     },
                   )}{" "}
-                  to{" "}
+                  -{" "}
                   {new Date(current.end as string).toLocaleTimeString("en-US", {
                     hour: "2-digit",
                     minute: "2-digit",
                   })}
+                  <p>Location: {current.location}</p>
                 </div>
               </DialogTitle>
               <DialogDescription className="font-redefined-chivo relative text-black">
@@ -87,16 +115,19 @@ const Events = () => {
           </DialogContent>
         </Dialog>
       )}
-      <div className="mx-auto my-12 flex w-full flex-col rounded-xl border-4 bg-white p-16 pb-12 md:w-10/12">
-        <div>
-          <Calendar
-            mode="single"
-            selected={new Date()}
-            className="mx-auto w-full"
-            events={data}
-            setCurrent={setCurrent}
-          />
-        </div>
+      <div className="bg-redefined-taupe flex h-full w-full flex-col">
+        <EventTitle title="Calendar" />
+
+        <Calendar
+          mode="single"
+          selected={new Date()}
+          className="mx-auto w-21/22 md:w-10/12"
+          events={data}
+          setCurrent={setCurrent}
+        />
+        <EventTitle title="Upcoming Events" />
+        <UpcomingEvents events={upcomingEvents} />
+        <EventTitle />
       </div>
     </>
   );

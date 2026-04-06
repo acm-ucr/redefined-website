@@ -1,15 +1,16 @@
 "use client";
 
 interface TitleProps {
-  title: string;
+  title?: string;
 }
 const EventTitle = ({ title }: TitleProps) => {
   return (
-    <div className="w-ful flex flex-col place-items-center">
-      <h1 className="bg-redefined-cream font-redefined-chivo text-redefined-rust z-10 mt-5 w-[65vw] rounded-4xl p-3 text-center text-6xl font-semibold tracking-widest italic">
-        {title}
-      </h1>
-      <div className="bg-redefined-sage -mt-12 h-20 w-[80vw] rounded-full"></div>
+    <div className="bg-redefined-sage relative mx-auto mt-15 mb-10 flex h-10 w-[90vw] justify-center rounded-full sm:w-[80vw] lg:h-20">
+      {title && (
+        <h1 className="bg-redefined-cream font-redefined-chivo text-redefined-rust absolute -top-8 h-fit w-[70vw] rounded-4xl p-2 text-center text-3xl font-semibold tracking-widest italic sm:w-[60vw] sm:text-4xl lg:text-6xl">
+          {title}
+        </h1>
+      )}
     </div>
   );
 };

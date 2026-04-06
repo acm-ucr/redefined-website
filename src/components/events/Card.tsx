@@ -18,7 +18,7 @@ const Card = ({ title, location, date, time, index }: CardProps) => {
   const lineStyling = `h-1 w-full rounded-full border-0 ${mode ? " bg-redefined-rust" : " bg-redefined-cream"}`;
   const icon = icons[index % 3];
   return (
-    <div className="relative m-10 flex w-[33vw] flex-col place-items-center">
+    <div className="relative flex w-full max-w-3xs flex-col place-items-center">
       <p
         className={`font-redefined-zilla -mb-4 w-9/10 rounded-t-3xl p-4 pb-7 text-center text-xl font-bold md:text-2xl ${mode ? "text-redefined-cream bg-redefined-rust" : "text-redefined-rust bg-redefined-cream"}`}
       >
