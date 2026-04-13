@@ -18,7 +18,7 @@ import {
 import { isAfter, isSameDay } from "date-fns";
 import EventTitle from "@/components/events/EventTitle";
 import UpcomingEvents from "@/components/events/UpcomingEvents";
-import { CalendarEvent } from "@/components/events/types";
+import { CalendarEvent } from "@/data/types";
 
 const Events = () => {
   const [current, setCurrent] = useState<EventProps>({});

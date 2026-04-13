@@ -1,4 +1,4 @@
-import { CalendarEvent } from "@/components/events/types";
+import { CalendarEvent } from "@/data/types";
 import Card from "@/components/events/Card";
 
 interface EventsProps {
