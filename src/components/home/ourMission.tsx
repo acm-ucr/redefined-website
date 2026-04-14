@@ -4,7 +4,7 @@ import JoinUs from "@/components/home/joinUs";
 
 const OurMissionComponent = () => {
   return (
-    <div className="bg-redefined-taupe flex w-full flex-col items-center gap-12 pt-10">
+    <div className="flex w-full flex-col items-center gap-12 pt-10">
       <p className="bg-redefined-cream text-redefined-rust font-redefined-chivo w-11/12 rounded-4xl text-center text-2xl leading-12 font-medium tracking-widest italic drop-shadow-[0px_17px_0px_#5d5947] sm:text-3xl md:text-4xl lg:p-4 lg:text-6xl">
         OUR MISSION
       </p>
