@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import board from "@/public/about/board.jpg";
+import board from "@/public/about/board.webp";
 import ambulance from "@/public/about/ambulance.svg";
 import { motion } from "motion/react";
 

@@ -1,8 +1,8 @@
-import noah from "@/public/board/noahWong.jpeg";
-import koni from "@/public/board/koniMoss.jpeg";
-import charlize from "@/public/board/charlizeMunar.jpeg";
-import alyssa from "@/public/board/alyssaNgo.jpeg";
-import james from "@/public/board/jamesDaluraya.jpeg";
+import noah from "@/public/board/noahWong.webp";
+import koni from "@/public/board/koniMoss.webp";
+import charlize from "@/public/board/charlizeMunar.webp";
+import alyssa from "@/public/board/alyssaNgo.webp";
+import james from "@/public/board/jamesDaluraya.webp";
 import { StaticImageData } from "next/image";
 
 export interface boardMember {

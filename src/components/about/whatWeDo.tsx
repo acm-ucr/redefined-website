@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import clinic from "@/public/about/clinic.png";
+import clinic from "@/public/about/clinic.webp";
 import nurse from "@/public/about/nurse.svg";
 import { motion } from "motion/react";
 
