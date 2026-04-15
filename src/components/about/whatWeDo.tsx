@@ -43,12 +43,12 @@ const WhatWeDo = () => {
           <motion.div
             {...imageAnimation}
             viewport={{ once: true }}
-            className="relative z-2 order-1 w-full xl:order-1 aspect-video drop-shadow-[-15px_10px_0px_var(--color-redefined-rust)] rounded-[4rem] overflow-hidden"
+            className="relative z-2 order-1 aspect-video w-full overflow-hidden rounded-[4rem] drop-shadow-[-15px_10px_0px_var(--color-redefined-rust)] xl:order-1"
           >
             <Image
               src={clinic}
               alt="Clinic Photo"
-              className="w-full h-full object-cover" 
+              className="h-full w-full object-cover"
             />
           </motion.div>
           <motion.p

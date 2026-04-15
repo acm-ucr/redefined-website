@@ -56,7 +56,7 @@ const GetToKnowUs = () => {
           <motion.div
             {...imageAnimation}
             viewport={{ once: true }}
-            className="relative z-2 order-1 w-full aspect-video rounded-[4rem] overflow-clip drop-shadow-[15px_10px_0px_var(--color-redefined-olive)]"
+            className="relative z-2 order-1 aspect-video w-full overflow-clip rounded-[4rem] drop-shadow-[15px_10px_0px_var(--color-redefined-olive)]"
           >
             <Image
               src={board}
