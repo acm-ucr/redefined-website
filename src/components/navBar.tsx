@@ -1,9 +1,10 @@
 "use client";
 import { useState } from "react";
-import Logo from "@/public/redefineD_logo.webp";
+import Logo from "@/public/logo.webp";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { motion, AnimatePresence } from "motion/react";
 
 const NavBar = () => {
   const pathname = usePathname();
@@ -14,14 +15,20 @@ const NavBar = () => {
   const mobileLinkStyle =
     "font-redefined-alfa text-4xl text-redefined-rust hover:opacity-70";
 
+  const mobileMenuAnimation = {
+    initial: { opacity: 0, y: -20 },
+    animate: { opacity: 1, y: 0 },
+    exit: { opacity: 0, y: -20 },
+    transition: { duration: 0.3, ease: "easeInOut" as const },
+  };
+
   return (
     <nav className="bg-redefined-olive relative z-[100] px-8 py-5">
       <div className="flex items-center justify-between">
         <Link href="/" className="z-50 flex h-10 w-50 items-center">
-          <Image src={Logo} alt="Logo" />
+          <Image src={Logo} alt="redefineD Logo" />
         </Link>
 
-        {/* desktop section */}
         <div className="hidden gap-10 md:flex">
           <Link
             href="/about"
@@ -49,7 +56,6 @@ const NavBar = () => {
           </Link>
         </div>
 
-        {/* layer z-50 on top md:hidden mobile section */}
         <button
           className="z-50 flex h-8 w-8 items-center justify-center md:hidden"
           onClick={() => setIsOpen(!isOpen)}
@@ -68,41 +74,45 @@ const NavBar = () => {
         </button>
       </div>
 
-      {/* close menu on click */}
-      {isOpen && (
-        <div className="bg-redefined-olive/90 absolute top-full left-0 z-50 w-full p-6 backdrop-blur-md md:hidden">
-          <div className="bg-redefined-cream flex w-full flex-col items-center gap-6 rounded-[40px] py-14">
-            <Link
-              href="/about"
-              onClick={() => setIsOpen(false)}
-              className={mobileLinkStyle}
-            >
-              About
-            </Link>
-            <Link
-              href="/board"
-              onClick={(e) => e.stopPropagation()}
-              className={mobileLinkStyle}
-            >
-              Board
-            </Link>
-            <Link
-              href="/events"
-              onClick={() => setIsOpen(false)}
-              className={mobileLinkStyle}
-            >
-              Events
-            </Link>
-            <Link
-              href="/gallery"
-              onClick={() => setIsOpen(false)}
-              className={mobileLinkStyle}
-            >
-              Gallery
-            </Link>
-          </div>
-        </div>
-      )}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            {...mobileMenuAnimation}
+            className="bg-redefined-olive/90 absolute top-full left-0 z-50 w-full p-6 backdrop-blur-md md:hidden"
+          >
+            <div className="bg-redefined-cream flex w-full flex-col items-center gap-6 rounded-[40px] py-14">
+              <Link
+                href="/about"
+                onClick={() => setIsOpen(false)}
+                className={mobileLinkStyle}
+              >
+                About
+              </Link>
+              <Link
+                href="/board"
+                onClick={() => setIsOpen(false)}
+                className={mobileLinkStyle}
+              >
+                Board
+              </Link>
+              <Link
+                href="/events"
+                onClick={() => setIsOpen(false)}
+                className={mobileLinkStyle}
+              >
+                Events
+              </Link>
+              <Link
+                href="/gallery"
+                onClick={() => setIsOpen(false)}
+                className={mobileLinkStyle}
+              >
+                Gallery
+              </Link>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 };

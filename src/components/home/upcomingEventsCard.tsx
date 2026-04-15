@@ -1,6 +1,7 @@
 "use client";
 
 import { useQuery } from "@tanstack/react-query";
+import { motion } from "motion/react";
 import EventEntry from "@/components/home/upcomingEvent";
 import Image from "next/image";
 import stethoscope from "@/public/stethoscope.svg";
@@ -17,6 +18,13 @@ interface SimpleEvent {
   date: string;
   title: string;
 }
+
+const up_motion = {
+  initial: { opacity: 0, y: 20 },
+  whileInView: { opacity: 1, y: 0 },
+  transition: { duration: 0.6, delay: 0.3, ease: "easeOut" as const },
+};
+
 const UpcomingEvents = () => {
   const { data = [], isLoading } = useQuery({
     queryKey: ["googleCalendarEvents"],
@@ -57,7 +65,11 @@ const UpcomingEvents = () => {
     },
   });
   return (
-    <div className="bg-redefined-olive-50 relative mx-auto w-11/12 rounded-4xl md:w-7/10">
+    <motion.div
+      {...up_motion}
+      viewport={{ once: true }}
+      className="bg-redefined-olive-50 relative mx-auto my-10 w-11/12 rounded-4xl md:w-7/10"
+    >
       <Image
         src={stethoscope}
         alt="stethoscope"
@@ -77,7 +89,7 @@ const UpcomingEvents = () => {
           <h2>No Upcoming Events</h2>
         )}
       </div>
-    </div>
+    </motion.div>
   );
 };
 
