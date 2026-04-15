@@ -84,9 +84,13 @@ const UpcomingEvents = () => {
             <EventEntry key={index} date={event.date} title={event.title} />
           ))
         ) : isLoading ? (
-          <h2>Loading Events</h2>
+          <h2 className="text-redefined-cream w-full text-center text-xl">
+            Loading Events
+          </h2>
         ) : (
-          <h2>No Upcoming Events</h2>
+          <h2 className="text-redefined-cream w-full text-center text-xl">
+            No Upcoming Events
+          </h2>
         )}
       </div>
     </motion.div>
