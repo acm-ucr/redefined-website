@@ -10,7 +10,6 @@ interface ImageProp {
 
 interface GalleryCardProp {
   rightOrient: boolean;
-
   title: string;
   images: ImageProp[];
   iconSrc: StaticImageData;
@@ -21,11 +20,13 @@ const MotionImage = motion(Image);
 
 const entryAnimation = {
   initial: { opacity: 0 },
-  whileInView: { opacity: 1, transition: { duration: 0.5 } },
-  whileHover: { scale: 1.04, transition: { duration: 0.25 } },
+  whileInView: { opacity: 1 },
+  transition: { duration: 0.5 },
 };
+
 const pictAnimation = {
-  whileHover: { scale: 1.1, transition: { duration: 0.25 } },
+  whileHover: { scale: 1.1 },
+  transition: { duration: 0.25 },
 };
 
 const GalleryCard = ({
@@ -55,10 +56,8 @@ const GalleryCard = ({
 
   return (
     <motion.div
-      variants={entryAnimation}
-      initial="initial"
-      whileInView="whileInView"
-      whileHover="whileHover"
+      {...entryAnimation}
+      viewport={{ once: true }}
       className="relative flex w-full justify-center"
     >
       <p
@@ -71,8 +70,7 @@ const GalleryCard = ({
       >
         {images.map((image) => (
           <MotionImage
-            variants={pictAnimation}
-            whileHover="whileHover"
+            {...pictAnimation}
             key={image.id}
             alt={image.alt}
             src={image.src}

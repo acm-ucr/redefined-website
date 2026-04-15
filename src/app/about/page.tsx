@@ -1,11 +1,13 @@
-import About from "@/components/about/card";
+import GetToKnowUs from "@/components/about/getToKnowUs";
+import WhatWeDo from "@/components/about/whatWeDo";
 
-const AboutPage = () => {
+const About = () => {
   return (
     <>
-      <About />
+      <WhatWeDo />
+      <GetToKnowUs />
     </>
   );
 };
 
-export default AboutPage;
+export default About;
