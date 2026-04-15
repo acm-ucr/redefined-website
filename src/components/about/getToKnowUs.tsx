@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import board from "@/public/about/board.webp";
+import board from "@/public/about/board.jpg";
 import ambulance from "@/public/about/ambulance.svg";
 import { motion } from "motion/react";
 
@@ -56,12 +56,12 @@ const GetToKnowUs = () => {
           <motion.div
             {...imageAnimation}
             viewport={{ once: true }}
-            className="relative z-2 order-1 h-full w-full"
+            className="relative z-2 order-1 w-full aspect-video rounded-[4rem] overflow-clip drop-shadow-[15px_10px_0px_var(--color-redefined-olive)]"
           >
             <Image
               src={board}
               alt="Board Photo"
-              className="h-full w-full object-contain drop-shadow-[15px_10px_0px_#5d5947]"
+              className="h-full w-full object-cover"
             />
           </motion.div>
         </div>

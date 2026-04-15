@@ -12,6 +12,7 @@
   --color-redefined-taupe: #c0baa7;
   --color-redefined-sage: #a39e8a;
   --color-redefined-sand: #dfd8c3;
+  --color-redefined-olive-50: color-mix(in srgb, #5d5947 50%, transparent);
 
   --font-redefined-chivo: "Chivo", serif;
   --font-redefined-zilla: "Zilla Slab", serif;

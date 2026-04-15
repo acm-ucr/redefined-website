@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import clinic from "@/public/about/clinic.webp";
+import clinic from "@/public/about/clinic.png";
 import nurse from "@/public/about/nurse.svg";
 import { motion } from "motion/react";
 
@@ -43,12 +43,12 @@ const WhatWeDo = () => {
           <motion.div
             {...imageAnimation}
             viewport={{ once: true }}
-            className="relative z-2 order-1 h-full w-full xl:order-1"
+            className="relative z-2 order-1 w-full xl:order-1 aspect-video drop-shadow-[-15px_10px_0px_var(--color-redefined-rust)] rounded-[4rem] overflow-hidden"
           >
             <Image
               src={clinic}
               alt="Clinic Photo"
-              className="h-full w-full object-contain drop-shadow-[-15px_10px_0px_#9e4325]"
+              className="w-full h-full object-cover" 
             />
           </motion.div>
           <motion.p

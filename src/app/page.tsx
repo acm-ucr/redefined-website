@@ -5,7 +5,7 @@ import JoinUs from "@/components/home/joinUs";
 import UpcomingEvents from "@/components/home/upcomingEventsCard";
 const Home = () => {
   return (
-    <div className="bg-redefined-taupe">
+    <div className="bg-redefined-taupe flex flex-col">
       <Lander />
       <OurMissionComponent />
       <ForOurMembersComponent />

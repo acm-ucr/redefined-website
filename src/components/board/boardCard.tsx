@@ -1,7 +1,8 @@
 import Image from "next/image";
+import { StaticImageData } from "next/image";
 
 interface BoardCardProps {
-  imagePath: string;
+  imagePath: StaticImageData;
   name: string;
   role: string;
   major: string;
@@ -11,7 +12,7 @@ interface BoardCardProps {
 const BoardCard = ({ imagePath, name, role, major, email }: BoardCardProps) => {
   return (
     <div className="mt-6 flex flex-shrink-0 p-4 lg:mt-8 lg:p-6">
-      <div className="relative h-[28rem] w-72 sm:h-[32rem] sm:w-80 lg:h-[38rem] lg:w-[23rem] xl:h-[40rem] xl:w-[24rem] 2xl:h-[42rem] 2xl:w-[26rem]">
+      <div className="relative h-[28rem] w-72 sm:h-[32rem] sm:w-80 lg:h-[35rem] lg:w-[23rem] xl:h-[36rem] xl:w-[24rem] 2xl:h-[40rem] 2xl:w-[26rem]">
         <div className="bg-redefined-rust absolute inset-0 translate-x-3 -translate-y-3 rounded-3xl sm:translate-x-4 sm:-translate-y-4 lg:translate-x-5 lg:-translate-y-5"></div>
 
         <div className="bg-redefined-cream relative flex h-full flex-col items-center rounded-3xl p-4 lg:p-6">
