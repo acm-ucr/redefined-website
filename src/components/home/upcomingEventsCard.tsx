@@ -78,7 +78,7 @@ const UpcomingEvents = () => {
       <h2 className="font-redefined-chivo text-redefined-rust pt-5 text-center text-2xl font-medium italic md:text-4xl">
         Upcoming Events
       </h2>
-      <div className="flex flex-col p-5">
+      <div className="flex flex-col gap-2 p-5">
         {data.length > 0 ? (
           data.map((event: SimpleEvent, index: number) => (
             <EventEntry key={index} date={event.date} title={event.title} />
