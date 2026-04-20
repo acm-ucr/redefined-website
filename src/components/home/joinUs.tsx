@@ -11,7 +11,7 @@ const buttonAnimation = {
 const JoinUs = () => {
   return (
     <div className="bg-redefined-taupe">
-      <Link href="https://discord.com/invite/GrU6QAHJJ" target="_blank">
+      <Link href="https://www.instagram.com/ucrredefined/" target="_blank">
         <motion.div
           {...buttonAnimation}
           viewport={{ once: true }}
